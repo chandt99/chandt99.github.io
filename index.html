@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Title for the page -->
-    <title>Document</title>
+    <title>Taran Chand Data Science</title>
 
     <!-- Link to my style sheet -->
     <link rel="stylesheet" href="index2.css">
@@ -27,12 +27,12 @@
     <div class="myWeek1">
         <h1>Data Science for Economists.</h1>
         
-        <h3>Covid-19</h3>
-        <p>The first chart tracks Covid-19 cases by UK region.</p>
+        <h3>Goals Scored at Home</h3>
+        <p>The first chart shows the number of goals scored at home by month by the traditional Premier League top 6 at home in the 20/21 season.</p>
         <div class="chart" id="Chart1"></div>
 
-        <h3>Productivity puzzle</h3>
-        <p>My second chart looks at productivity in the UK</p>
+        <h3>Aging Populations</h3>
+        <p>The second chart shows the projected change in the proportion of people over 65 in the population of selected countries. </p>
         <div class="chart" id="Chart2"> </div>
     </div> 
 </body>
@@ -40,8 +40,8 @@
 
 <script>
     //Define charts:
-    var myChart1 = "chart1_covidUKRegions.json";
-    var myChart2 = "chart2_ukProductivity.json";
+    var myChart1 = "football1";
+    var myChart2 = "AgingPop";
 
     // Embed charts:
     vegaEmbed('#Chart1', myChart1);
@@ -49,5 +49,3 @@
 </script>
 
 </html>
-
-
