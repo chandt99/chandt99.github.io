@@ -1,0 +1,38 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+      "text": "IMF Lending Outstanding Adjusted for Global GDP",
+      "subtitle":"Credit outstanding to all members as a % of global GDP, US$ (billions)",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+  
+  "data":{"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/IMF%20data%20adjusted%20for%20GDP.csv"},
+
+  
+  "height": 300,
+  "width": 300,
+
+  "mark": {
+    "type": "bar",
+    "color":"rgb(0,47,167"},
+
+
+"encoding": {
+     "x": {
+       "field": "Year",
+       "type": "temporal",
+       "axis": {
+         "title": null,
+         "grid": false,
+         "ticks": false,
+         "labelAngle": 45}},
+
+      "y": {
+        "field": "IMF loans as a % of World GDP (Current $)",
+        "type": "quantitative",
+        "title": "",
+        "axis": {"grid": false}}
+}
+}
