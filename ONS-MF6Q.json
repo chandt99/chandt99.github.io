@@ -20,36 +20,6 @@
     },
     "months": [
         {
-            "date": "1997 JAN",
-            "label": "1997 JAN",
-            "month": "January",
-            "quarter": "",
-            "sourceDataset": "PUSF",
-            "updateDate": "2015-10-20T23:00:00.000Z",
-            "value": "",
-            "year": "1997"
-        },
-        {
-            "date": "1997 FEB",
-            "label": "1997 FEB",
-            "month": "February",
-            "quarter": "",
-            "sourceDataset": "PUSF",
-            "updateDate": "2015-10-20T23:00:00.000Z",
-            "value": "",
-            "year": "1997"
-        },
-        {
-            "date": "1997 MAR",
-            "label": "1997 MAR",
-            "month": "March",
-            "quarter": "",
-            "sourceDataset": "PUSF",
-            "updateDate": "2015-10-20T23:00:00.000Z",
-            "value": "",
-            "year": "1997"
-        },
-        {
             "date": "1997 APR",
             "label": "1997 APR",
             "month": "April",
