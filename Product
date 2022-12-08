@@ -1,0 +1,53 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+   
+    "data": {"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/DP_LIVE_05122022181002018.csv"},
+  
+    "height": 500,
+    "width": 300,
+  
+    "encoding": {
+      "x": {"field": "TIME", "type": "temporal", "title": "date"},
+      "y": {"field": "Value", "type": "quantitative", "title": "price", "scale":{"domain":[94,112]}},
+
+  
+      "color": {
+        "condition": {
+          "param": "hover",
+          "field": "LOCATION",
+          "type": "nominal",
+          "legend": null
+        },
+        "value": "grey"
+      },
+      "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.2}
+    },
+    "layer": [
+      {
+        "description": "transparent layer to make it easier to trigger selection",
+        "params": [
+          {
+            "name": "hover",
+            "value": [{"LOCATION": "GBR"}],
+            "select": {"type": "point", "fields": ["LOCATION"], "on": "mouseover"}
+          }
+        ],
+        "mark": {"type": "line", "strokeWidth": 8, "point":true, "stroke": "transparent"}
+      },
+      {"mark": "line"},
+      {
+        "encoding": {
+          "x": {"aggregate": "max", "field": "TIME"},
+          "y": {"aggregate": {"argmax": "TIME"}, "field": "Value"}
+        },
+        "layer": [
+          {"mark": {"type": "circle"}},
+          {
+            "mark": {"type": "text", "align": "left", "dx": 4},
+            "encoding": {"text": {"field": "LOCATION", "type": "nominal"}}
+          }
+        ]
+      }
+    ],
+    "config": {"view": {"stroke": null}}
+  }
