@@ -17,8 +17,6 @@ East,2017,4.280712
 East,2018,4.142076
 East,2019,4.060921
 East,2020,4.323168
-East,2021,3.802203
-East,2022,3.717694
 East Midlands,2003,4.14298
 East Midlands,2004,4.150165
 East Midlands,2005,4.166403
@@ -37,8 +35,6 @@ East Midlands,2017,4.053002
 East Midlands,2018,4.021957
 East Midlands,2019,3.801118
 East Midlands,2020,3.94782
-East Midlands,2021,3.580617
-East Midlands,2022,3.46908
 London,2003,2.702029
 London,2004,2.708333
 London,2005,2.624364
@@ -57,8 +53,6 @@ London,2017,2.98182
 London,2018,3.018055
 London,2019,2.936061
 London,2020,2.805854
-London,2021,2.670011
-London,2022,2.5003
 North East,2003,3.6941
 North East,2004,3.825831
 North East,2005,3.834216
@@ -97,8 +91,6 @@ North West,2017,3.592163
 North West,2018,3.620508
 North West,2019,3.479903
 North West,2020,3.812907
-North West,2021,3.452251
-North West,2022,3.224165
 Northern Ireland,2003,4.134367
 Northern Ireland,2004,4.591667
 Northern Ireland,2005,4.881657
@@ -117,8 +109,6 @@ Northern Ireland,2017,4.871991
 Northern Ireland,2018,4.742794
 Northern Ireland,2019,4.593639
 Northern Ireland,2020,4.652827
-Northern Ireland,2021,4.277723
-Northern Ireland,2022,3.834808
 Scotland,2003,3.625754
 Scotland,2004,3.465474
 Scotland,2005,3.650364
@@ -137,8 +127,6 @@ Scotland,2017,3.518354
 Scotland,2018,3.570594
 Scotland,2019,3.443878
 Scotland,2020,3.245307
-Scotland,2021,3.133474
-Scotland,2022,2.876929
 South East,2003,3.126547
 South East,2004,3.319331
 South East,2005,3.607858
@@ -157,8 +145,6 @@ South East,2017,4.061533
 South East,2018,4.144376
 South East,2019,3.957532
 South East,2020,3.782745
-South East,2021,3.426479
-South East,2022,3.221639
 South West,2003,3.657866
 South West,2004,3.647538
 South West,2005,4.009573
@@ -177,8 +163,6 @@ South West,2017,4.3869
 South West,2018,4.42217
 South West,2019,4.176271
 South West,2020,4.334373
-South West,2021,3.852583
-South West,2022,3.530047
 Wales,2003,3.545387
 Wales,2004,3.391629
 Wales,2005,3.70234
@@ -197,8 +181,6 @@ Wales,2017,4.005216
 Wales,2018,3.997315
 Wales,2019,3.925121
 Wales,2020,4.282288
-Wales,2021,3.752167
-Wales,2022,3.357143
 West Midlands,2003,3.797961
 West Midlands,2004,3.580217
 West Midlands,2005,3.831723
@@ -217,8 +199,6 @@ West Midlands,2017,3.916606
 West Midlands,2018,3.783879
 West Midlands,2019,3.722409
 West Midlands,2020,3.772944
-West Midlands,2021,3.444915
-West Midlands,2022,3.213893
 Yorkshire and The Humber,2003,3.309204
 Yorkshire and The Humber,2004,3.377083
 Yorkshire and The Humber,2005,3.577446
@@ -237,5 +217,3 @@ Yorkshire and The Humber,2017,3.890467
 Yorkshire and The Humber,2018,3.880643
 Yorkshire and The Humber,2019,3.792754
 Yorkshire and The Humber,2020,3.922261
-Yorkshire and The Humber,2021,3.564463
-Yorkshire and The Humber,2022,3.630428
