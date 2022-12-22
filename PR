@@ -24,6 +24,7 @@
     },
     "layer": [
       {
+        "description": "transparent layer to make it easier to trigger selection",
         "params": [
           {
             "name": "hover",

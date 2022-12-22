@@ -1,0 +1,45 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "Lending to Private Sector + ROTW",
+  
+     "title": {
+      "text": "Lending to Private Sector + ROTW",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+    "config": {
+      "background":"rgb(28, 91, 98)",
+      "view": {"stroke": "transparent"}},
+    "data": {
+      "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/ONS-IL65.json",
+      "format":{"type":"json","property":"months"}},
+  
+    "height": 150,
+    "width": 145,
+
+    "mark": {
+        "type": "line",
+        "color": "#ce713b"
+      },
+    
+    "encoding": {
+      "x": {
+        "field": "label",
+        "type": "temporal",
+        "axis": {
+          "title": "Year",
+          "grid": false,
+          "labelSeparation": 20,
+          "ticks": false}},
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Net lending (£m)",
+        "axis": {"grid": false}
+      }
+    }
+  }

@@ -1,0 +1,46 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+ 
+  "data":{"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/PLValueFinal%20(1).json"},
+
+  "height": 300,
+  "width": 508,
+
+  "title": {
+    "text": "Premier League Squad Market Value Share",
+    "subtitle":["Total squad market value of each EPL team as a percentage of the total",""],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "white",
+    "subtitleColor":"white"
+  },
+
+  "config": {
+    "background":"rgb(28, 91, 98)",
+    "view": {"stroke": "transparent"}},
+
+  "mark": {
+    "type": "bar",
+    "color":"#ce713b"},
+
+
+"encoding": {
+     "x": {
+       "field": "Club",
+       "type": "nominal",
+       "sort":"-y"
+      },
+
+      "y": {
+        "field": "Market Share (%)",
+        "type": "quantitative"
+        },
+
+        "tooltip":[
+          {"field":"Club", "title":""},
+        {"field":"Market Share"},
+        {"field":"Market Value (Millions)"}]
+}
+}
+

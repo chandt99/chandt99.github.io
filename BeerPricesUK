@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  "height": 500,
+  "width": 540,
+
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/beer%20means%20July%20year%20csv.csv"},
+
+
+      "transform": [
+        {
+          "lookup": "regionDesc",
+          "from":{
+            "data":{
+              "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/UKmapITL1",
+              "format": {"type":"json",
+        "property": "features"}},
+              "key": "properties.ITL121NM",
+              "fields": ["properties","type","geometry"]
+            }
+          },
+{"filter": "datum.year==year"}
+      ],
+
+"params": [
+    {
+      "name": "year",
+      "value": 2022,
+      "bind": {
+        "input": "range",
+        "min": 2005,
+        "max": 2022,
+        "step": 1,
+        "name": "Select the year:"
+      }
+    }
+  ],
+"projection": {"type": "mercator"},
+       "mark": {
+      "type": "geoshape",
+      "stroke": "black",
+      "strokeWidth":0.5},
+  "encoding": {
+    "color":{
+      "field":"p_mean",
+      "type": "quantitative",
+      "title":"Price of a Beer", 
+      "scale":{"scheme":"yelloworangered",
+      "domxxainMin":2,
+      "domainMax":5}
+    },
+    "tooltip":[
+      {"field":"properties.ITL121NM", "title":"Region"},
+      {"field":"p_mean","title":"Average Pint Price", "format":".2f"}]
+  }
+      }
+    
+    

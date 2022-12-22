@@ -1,0 +1,64 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    
+    "height": 500,
+    "width": 300,
+  
+      "config": {
+        "background":"#F6EAE4", "view": {"stroke": "transparent"}},
+   
+    "data": {
+      "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/Primary%20school%20meals%202022%20July.csv"},
+  
+  
+        "transform": [
+          {
+            "lookup": "regionDesc",
+            "from":{
+              "data":{
+                "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/UKmapITL1",
+                "format": {"type":"json",
+          "property": "features"}},
+                "key": "properties.ITL121NM",
+                "fields": ["properties","type","geometry"]
+              }
+            },
+  {"filter": "datum.year==year"}
+        ],
+  
+  "params": [
+      {
+        "name": "year",
+        "value": 2020,
+        "bind": {
+          "input": "range",
+          "min": 2005,
+          "max": 2020,
+          "step": 1,
+          "name": "Select the year:"
+        }
+      }
+    ],
+  "projection": {"type": "mercator"},
+         "mark": {
+        "type": "geoshape",
+        "stroke": "black",
+        "strokeWidth":0.5},
+    "encoding": {
+      "color":{
+        "field":"p_mean",
+        "type": "quantitative",
+        "title":"Meal Cost 2020 (£s)", 
+        "scale":{"scheme":"yelloworangebrown",
+        "domxxainMin":1.5,
+        "domxxainMax":2.5},
+        "legend":{"labelFontSize":15, "titleFontSize":13, "format":".2f"}
+      },
+      "tooltip":[
+        {"field":"properties.ITL121NM", "title":"Region"},
+        {"field":"p_mean","title":"Average Meal Price", "format":".2f"}]
+    }
+        }
+      
+      

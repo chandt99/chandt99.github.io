@@ -12,13 +12,19 @@
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
-      "color": "black"
-    },
-  
-    "height": 300,
-    "width": 300,
+      "color": "white",
+      "subtitleColor":"white"
     
-    "mark": {"type": "line", "width":10},
+    },
+
+    "config": {
+      "background":"rgb(28, 91, 98)",
+      "view": {"stroke": "transparent"}},
+  
+    "height": 310,
+    "width": 293,
+    
+    "mark": {"type": "line", "width":10, "color": "#002fa7"},
   
     "transform": [{"filter": {"selection": "Region"}}],
     
@@ -54,12 +60,13 @@
     },
   
     "encoding": {
-      "x": {"field": "Year", "type": "temporal", "title": null},
+      "x": {"field": "Year", "type": "temporal", "title": "Year"
+    },
       
       "y": {
         "field": "sh_65+",
         "type": "quantitative",
-        "title": null
+        "title": "Proportion of population 65+"
       },
       
         

@@ -12,6 +12,9 @@
     "color": "black"
   },
   
+  "config": {
+    "background":"rgb(28, 91, 98)",
+    "view": {"stroke": "transparent"}},
   "data": {
     "url": "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/charts/ukMacro/GI4.DataHub.GrowthInnovationOutputperHour.csv"},
 

@@ -9,25 +9,30 @@
     },
   
       "title": {
-      "text": "Premiership - goals",
+      "text": "English Premier League 'Top 6' - Goals",
       "subtitle":["Goals scored at home, 20/21 season",""],
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
-      "color": "black"
-  
+      "color": "white",
+      "subtitleColor":"white"
     },
+
+    "config": {
+      "background":"rgb(28, 91, 98)",
+      "view": {"stroke": "transparent"}},
   
     "transform": [
-      {"filter":{"field":"home_team.name", "oneOf": ["Chelsea FC", "Liverpool FC", "Manchester City", "Manchester United", "Tottenham Hotspur", "Leicester City"]}}
+      {"filter":{"field":"home_team.name", "oneOf": ["Chelsea FC", "Liverpool FC", "Manchester City", "Manchester United", "Tottenham Hotspur", "Leicester City"]}
+    }
     ],
   
     "mark": {
       "type":"bar",
-      "color":"rgb(0,67,167)"},
+      "color":"#ce713b"},
   
-    "height":100,
-    "width":150,
+    "height":104,
+    "width":148,
     "padding":{
       "top":0,
       "bottom":0,
@@ -45,7 +50,7 @@
       "y": {
         "field": "stats.home_score", 
         "type": "quantitative",
-        "title":null},
+        "title":"Goals"},
   
        "facet":{
          "field": "home_team.name",

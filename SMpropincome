@@ -1,0 +1,66 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ 
+  "title": {
+     "text": "School Meals as a % of Weekly Income",
+     "subtitle":"The cost of 5 school meals as a percentage of the average weekly income of the lowest earning quartile (by region)",
+     "subtitleFontStyle":"italic",
+     "subtitleFontSize":10,
+     "anchor": "start",
+     "color": "black"
+   },
+
+    "config": {
+      "background":"#F6EAE4", "view": {"stroke": "transparent"}},
+ 
+ 
+   "description": "Coronavirus cases",
+
+ 
+   "data": {
+     "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/School%20meals%20proportion%20of%20weekly%20earnings%20(25th)1.csv",
+     "format": {"type": "csv"}
+   },
+   
+     "height": 300,
+   "width": 400,
+   
+   "mark": {"type":"line", "point": false},
+   
+   "selection": {
+     "region": {"type":"multi", "fields": ["Geography"], "bind": "legend"}
+   },
+     
+   "encoding": {
+"tooltip":[{"field":"Geography"}, {"field":"Meal/Income", "format":".2f", "title":"Meals as a % of Weekly Income"}],
+
+     "x": {
+       "field": "Year", 
+       "type": "temporal", 
+       "title": null, 
+       "axis":{"grid":false, "title":"Year"}
+       },
+ 
+     "y": {
+       "field": "Meal/Income",
+       "type": "quantitative",
+       "title": null,
+       "axis":{"grid":true, "title":"% of Income"},
+       "scale":{"domainMin":2,
+       "domainMax":5.5}
+       },
+ 
+     "color": {
+       "field": "Geography",
+       "type": "nominal",
+       "scale": {"scheme": "tableau20"},
+       "title": null,
+       "legend": {
+        "title":"Region",
+        "labelFontSize":13,
+         "orient": "right",
+         "columns":1, 
+         "fillColor":"#F6EAE4"}
+     },
+     "opacity": {"condition": {"selection": "region", "value": 1}, "value": 0.1}        
+   }
+ }
