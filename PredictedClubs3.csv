@@ -1,0 +1,93 @@
+,Club,League,LeagueCode,MV,Attendance,Predicted League,PredictedName
+0,Accrington Stanley,3: League 1,3,5.65,3201,4,4: League 2
+1,AFC Bournemouth  ,1: Premier League,1,179.7,10269,3,3: League 1
+2,AFC Wimbledon  ,4: League 2,4,1.48,7472,4,4: League 2
+3,Arsenal FC,1: Premier League,1,759.0,60150,1,1: Premier League
+4,Aston Villa,1: Premier League,1,467.6,41682,1,1: Premier League
+5,Barnsley FC  ,3: League 1,3,3.13,9949,3,3: League 1
+6,Barrow AFC,4: League 2,4,1.95,3431,4,4: League 2
+7,Birmingham City,2: Championship,2,41.7,16555,2,2: Championship
+8,Blackburn Rovers,2: Championship,2,63.1,14027,2,2: Championship
+9,Blackpool FC,2: Championship,2,28.05,11792,2,2: Championship
+10,Bolton Wanderers,3: League 1,3,10.63,18061,2,2: Championship
+11,Bradford City,4: League 2,4,3.6,17367,2,2: Championship
+12,Brentford FC,1: Premier League,1,305.5,17068,2,2: Championship
+13,Brighton & Hove Albion,1: Premier League,1,325.6,31425,1,1: Premier League
+14,Bristol City,2: Championship,2,36.95,19705,2,2: Championship
+15,Bristol Rovers  ,3: League 1,3,7.0,8703,4,4: League 2
+16,Burnley FC  ,2: Championship,2,89.85,19277,2,2: Championship
+17,Burton Albion,3: League 1,3,7.45,3278,4,4: League 2
+18,Cambridge United,3: League 1,3,6.15,6034,4,4: League 2
+19,Cardiff City,2: Championship,2,41.7,17964,2,2: Championship
+20,Carlisle United,4: League 2,4,2.03,5370,4,4: League 2
+21,Charlton Athletic,3: League 1,3,8.25,13110,2,2: Championship
+22,Chelsea FC,1: Premier League,1,849.5,39901,1,1: Premier League
+23,Cheltenham Town,3: League 1,3,6.78,4086,4,4: League 2
+24,Colchester United,4: League 2,4,6.65,3220,4,4: League 2
+25,Coventry City,2: Championship,2,30.05,19218,2,2: Championship
+26,Crawley Town,4: League 2,4,2.95,2894,4,4: League 2
+27,Crewe Alexandra,4: League 2,4,3.9,3852,4,4: League 2
+28,Crystal Palace,1: Premier League,1,293.2,24691,2,2: Championship
+29,Derby County  ,3: League 1,3,22.9,26926,2,2: Championship
+30,Doncaster Rovers,4: League 2,4,4.3,6314,4,4: League 2
+31,Everton FC,1: Premier League,1,407.1,39209,1,1: Premier League
+32,Exeter City  ,3: League 1,3,6.4,6679,4,4: League 2
+33,Fleetwood Town,3: League 1,3,6.75,3378,4,4: League 2
+34,Forest Green Rovers  ,3: League 1,3,6.75,3088,4,4: League 2
+35,Fulham FC  ,1: Premier League,1,240.0,22871,2,2: Championship
+36,Gillingham FC,4: League 2,4,3.73,4378,4,4: League 2
+37,Grimsby Town  ,4: League 2,4,1.45,6590,4,4: League 2
+38,Harrogate Town,4: League 2,4,2.25,2015,4,4: League 2
+39,Hartlepool United,4: League 2,4,2.93,4523,4,4: League 2
+40,Huddersfield Town,2: Championship,2,28.95,18598,2,2: Championship
+41,Hull City,2: Championship,2,55.35,17001,2,2: Championship
+42,Ipswich Town,3: League 1,3,12.85,25533,2,2: Championship
+43,Leeds United,1: Premier League,1,271.8,36441,1,1: Premier League
+44,Leicester City,1: Premier League,1,428.1,31630,1,1: Premier League
+45,Leyton Orient,4: League 2,4,3.05,7497,4,4: League 2
+46,Lincoln City,3: League 1,3,6.78,8318,4,4: League 2
+47,Liverpool FC ,1: Premier League,1,868.0,53271,1,1: Premier League
+48,Luton Town,2: Championship,2,30.0,9786,4,4: League 2
+49,Manchester City,1: Premier League,1,1110.0,53152,1,1: Premier League
+50,Manchester United,1: Premier League,1,730.6,73645,1,1: Premier League
+51,Mansfield Town,4: League 2,4,4.18,6489,4,4: League 2
+52,Middlesbrough FC,2: Championship,2,60.55,24389,2,2: Championship
+53,Millwall FC,2: Championship,2,38.3,13841,2,2: Championship
+54,Milton Keynes Dons,3: League 1,3,10.03,8344,4,4: League 2
+55,Morecambe FC,3: League 1,3,5.5,4598,4,4: League 2
+56,Newcastle United,1: Premier League,1,447.1,52177,1,1: Premier League
+57,Newport County,4: League 2,4,2.65,4030,4,4: League 2
+58,Northampton Town,4: League 2,4,3.63,5127,4,4: League 2
+59,Norwich City  ,2: Championship,2,95.65,25943,2,2: Championship
+60,Nottingham Forest  ,1: Premier League,1,280.8,29040,1,1: Premier League
+61,Oxford United,3: League 1,3,8.98,7800,4,4: League 2
+62,Peterborough United  ,3: League 1,3,10.2,8300,4,4: League 2
+63,Plymouth Argyle,3: League 1,3,9.25,14904,2,2: Championship
+64,Port Vale FC  ,3: League 1,3,7.6,8287,4,4: League 2
+65,Portsmouth FC,3: League 1,3,13.4,18197,2,2: Championship
+66,Preston North End,2: Championship,2,40.5,16007,2,2: Championship
+67,Queens Park Rangers,2: Championship,2,52.45,14319,2,2: Championship
+68,Reading FC,2: Championship,2,31.6,13255,2,2: Championship
+69,Rochdale AFC,4: League 2,4,2.75,2858,4,4: League 2
+70,Rotherham United  ,2: Championship,2,18.25,10286,3,3: League 1
+71,Salford City,4: League 2,4,7.7,2926,4,4: League 2
+72,Sheffield United,2: Championship,2,87.85,28588,1,1: Premier League
+73,Sheffield Wednesday,3: League 1,3,14.55,23867,2,2: Championship
+74,Shrewsbury Town,3: League 1,3,7.15,6128,4,4: League 2
+75,Southampton FC,1: Premier League,1,315.0,30538,1,1: Premier League
+76,Stevenage FC,4: League 2,4,3.2,3095,4,4: League 2
+77,Stockport County  ,4: League 2,4,1.1,8615,4,4: League 2
+78,Stoke City,2: Championship,2,51.4,20450,2,2: Championship
+79,Sunderland AFC  ,2: Championship,2,39.0,37642,1,1: Premier League
+80,Sutton United,4: League 2,4,2.3,2842,4,4: League 2
+81,Swansea City,2: Championship,2,42.95,16561,2,2: Championship
+82,Swindon Town,4: League 2,4,3.85,8769,4,4: League 2
+83,Tottenham Hotspur,1: Premier League,1,688.3,61667,1,1: Premier League
+84,Tranmere Rovers,4: League 2,4,4.73,6186,4,4: League 2
+85,Walsall FC,4: League 2,4,2.1,5200,4,4: League 2
+86,Watford FC  ,2: Championship,2,8.9,19300,2,2: Championship
+87,West Bromwich Albion,2: Championship,2,56.75,22067,2,2: Championship
+88,West Ham United,1: Premier League,1,459.5,62450,1,1: Premier League
+89,Wigan Athletic  ,2: Championship,2,16.95,11754,2,2: Championship
+90,Wolverhampton Wanderers,1: Premier League,1,364.8,31231,1,1: Premier League
+91,Wycombe Wanderers,3: League 1,3,10.8,5429,4,4: League 2
