@@ -1,0 +1,15 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A scatterplot showing horsepower and miles per gallons for various cars.",
+  "width":300,
+  "height":300,
+
+  "data": {"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/ClubClustering.csv"},
+  "mark": "point",
+  "encoding": {
+    "x": {"field": "MV", "type": "quantitative"},
+    "y": {"field": "Attendance", "type": "quantitative"},
+    "color":{"field":"predicted_clusters","type": "nominal","title":"Club Groupings"},
+    "tooltip":[{"field":"Club"}, {"field":"MV","title":"Squad Market Value"}, {"field":"Attendance","title":"Average Attendance"}]
+  }
+}

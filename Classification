@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A scatterplot showing horsepower and miles per gallons for various cars.",
+  "width":300,
+  "height":300,
+  
+  "data": {"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/PredictedClubs3.csv"},
+  "mark": "point",
+  "encoding": {
+    "x": {"field": "MV", "type": "quantitative"},
+    "y": {"field": "Attendance", "type": "quantitative"},
+    "color":{"field":"League","type": "nominal","title":"Current League (22/23)"},
+    "tooltip":[{"field":"Club"}, {"field":"MV","title":"Squad Market Value"}, {"field":"Attendance","title":"Average Attendance"}],
+    "fill":{"field":"PredictedName","type":"nominal","title":"Predicted League"}
+  }
+}
