@@ -3,15 +3,14 @@
   
   "height": 500,
   "width": 540,
+  
   "title": {
     "text": "Map of Europe",
     "anchor": "start",
     "color": "white"},
 
 
-    "config": {
-        "background":"rgb(28, 91, 98)",
-        "view": {"stroke": "transparent"}},
+   
 
   "data": {
     "url": "https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/TopoJSON/europe.topojson",

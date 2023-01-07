@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title for the page -->
+    <title>Taran Chand Data Science: Week 1</title>
+
+    <!-- Link to my style sheet -->
+    <link rel="stylesheet" href="New1.css">
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
+
+
+    
+
+</head>
+<body>
+<div id="header-wrapper">
+<div id="header" class="container">
+	<div id="logo">
+		<h1><a href="#"><strong>Taran Chand: Data Science</strong></a></h1>
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="Portfolio.html">Portfolio</a></li>
+			<li><a href="Project.html">Project</a></li>
+            <li><a href="https://github.com/chandt99/chandt99.github.io" target="_blank" rel="noreferrer">Github</a></li>
+			
+    </ul>
+	</div>
+
+</div></div>
+
+             <!-- Intro
+            #f6eae4
+            #523e27
+            -->
+
+<div id="page" class="container">
+	<div id="onecolumn">
+		<div class="title">
+			<h1>Data Science Portfolio</h1>
+			<span class="byline">Econ300006 | Student Number: 1808820</span> </div>
+
+
+
+           
+	
+
+
+             <!-- Week 1-->
+             <br>
+
+    <div class="title">
+		<h2>Week 1: Embedding Charts</h2>
+
+
+	<div id="twocolumn">
+        
+                   
+                <h3>Government Approval Ratings</h3>
+                <p>The first chart shows the proportion of people who approve or disprove of the government of the time between 2011-2022.</p>
+                
+                <div class="chart3" id="Chart1"></div> 
+        
+                <h3>Aging Populations</h3>
+                <p>The second chart shows the projected change in the proportion of individuals over 65 in the populations of selected countries. </p>
+                <div class="chart3" id="Chart2"> </div>
+
+                <br>
+		
+	</div>
+    <br>
+    <p><span class="emphasized">Source: <a href="https://github.com/chandt99/RDeconomist.github.io" target="_blank" rel="noreferrer">Richard Davies Github</a>.
+
+
+    <hr color=#32251B width="75%" size="8" align="center" opacity="0.5">
+
+             <!-- Week 2-->
+
+    <div id="onecolumn">
+		<div class="title">
+			<h2>Week 2: Altering Data</h2>
+		</div>
+
+             <div id="twocolumn">
+        
+                   
+                <h3>IMF Total Lending</h3>
+                <p>The first chart exhibits the total IMF credit outstanding for members between 1984-2022 in SDRs (billions). This shows recent years as having the highest absolute values of outstanding IMF loans over the last 30 years, suggesting high risk and instability in the global economy.</p>
+                
+                <div class="chart3" id="Chart3"></div> 
+                <p> However, this absolute value does not take in to account the overall growth in global GDP over the last 30 years.
+                </p>
+
+                <h3>IMF Total Lending Adjusted for GDP</h3>
+                <p>The second chart has adjusted this data to account for the rise in Global GDP to show the IMF outstanding loan value as a percentage of Global GDP.
+                    Years with the highest percentage of IMF outstanding loan to global GDP suggest higher risk in the global economy. </p>
+                <div class="chart3" id="Chart4"> </div>
+                <p><span class="emphasized">Note: both IMF outstanding loan value and global GDP have been converted to current US Doillar values.</span></p>
+		
+	        </div>
+                <div id="onecolumn">
+                    <p>Conclusion: After adjusting for global GDP, 1984 is the 'riskiest' year in terms of IMF loan repayment while 2007 is the least risky.</p>
+            </div>  
+
+
+            <br><p><span class="emphasized">Sources: <a href="https://www.imf.org/external/np/fin/tad/extcred1.aspx" target="_blank" rel="noreferrer">IMF Credit</a>, <a href="https://www.imf.org/external/np/fin/data/rms_sdrv.aspx" target="_blank" rel="noreferrer">SDR Valuation</a>.
+
+
+            <hr color=#32251B width="75%" size="8" align="center" opacity="0.5">
+
+            <!-- Week 3-->
+            <div id="onecolumn">
+                <div class="title">
+                    <h2>Week 3: In-Code Data</h2>
+
+            <h3>Exchange Rates: Pound-Euro and Pound-Dollar (2000)</h3>
+            <p>Graph 1 shows the exchange rate of the pound to the Dollar and Euro using in-code data.</p>
+            
+            <div class="chart3" id="Chart5"></div> 
+          
+            <br>
+
+            <h3>Exchange Rates: Different Encoding</h3>
+            <p>Graph 2 shows the data with a tooltip encoding and grid lines to allow for clearer comparison between the ERs at a given time. </p>
+            <div class="chart3" id="Chart6"> </div>
+                     
+	        </div>
+            <p> <a href="https://colab.research.google.com/drive/14JcH1U7iXlEAeb53SBX1O58j9_yCzila?usp=sharing" target="_blank" rel="noreferrer">The Google Colab file can be found here.</a></p>
+
+            <br>
+
+            <br><p><span class="emphasized">Sources: <a href="https://fred.stlouisfed.org/series/DEXUSUK" target="_blank" rel="noreferrer">Dollar to Pound ER</a>, <a href="https://fred.stlouisfed.org/series/CCEUSP01GBM651N" target="_blank" rel="noreferrer">Euro to Pound ER</a>.
+
+            <hr color=#32251B width="75%" size="8" align="center" opacity="0.5">
+
+            <!-- Week 4-->
+            <div id="onecolumn">
+                <div class="title">
+                    <h2>Week 4: Data Scraping</h2>
+
+            <h3>Market Value of Premier League Squads</h3>
+            <p>This graphs shows the ordered market value of the squads of Premier League clubs, as both a percentage of the total squad values of PL clubs, and in pounds (using a tooltip). The data was scraped from the website <a href="https://www.transfermarkt.co.uk/premier-league/marktwerteverein/wettbewerb/GB1/plus/?stichtag=2022-08-15" target="_blank" rel="noreferrer">TransferMarkt</a>.</p>
+            <p> <a href="https://colab.research.google.com/drive/1QzTdRkTMqRjp0GL4FNsADH067lizItTh?usp=sharing" target="_blank" rel="noreferrer">The Google Colab file containing the data scraping and cleaning can be found here.</a></p>
+            <div class="chart3" id="Chart7"></div> 
+            <p>
+                I chose this site as I have tried to get data from it previously; scraping and converting the data into TIDY form made this a lot easier.
+            </p>
+
+            <br><p><span class="emphasized">Source:  <a href="https://www.transfermarkt.co.uk/premier-league/marktwerteverein/wettbewerb/GB1/plus/?stichtag=2022-08-15" target="_blank" rel="noreferrer">TransferMarkt</a>.</span></p>
+
+            <br>
+            <hr color=#32251B width="75%" size="8" align="center" opacity="0.5">
+        </div>
+            <!-- Week 5-->
+            <div id="onecolumn">
+                <div class="title">
+                    <h2>Week 5: API</h2>
+                    <p>The below graphs are a collection of data sets surrounding government spending and debt. These have been taken from the ONS API, using a loop to <br> automatically download the data.</p>
+                    <p> <a href="https://colab.research.google.com/drive/100qBwZ8MBgEv6ybHuxZe6VJuSrJhclmG?usp=sharing" target="_blank" rel="noreferrer">The Google Colab file containing the code for this can be found here.</a></p>
+            <div id="container4">
+                <div class="chart4" id="Chart8"></div>
+                <div class="chart4" id="Chart9"></div>
+                <div class="chart4" id="Chart10"></div>
+                <br>
+                <div class="chart4" id="Chart11"></div>
+                <div class="chart4" id="Chart12"></div>
+                <div class="chart4" id="Chart13"></div>
+                <br>
+                <div class="chart4" id="Chart14"></div>
+                <div class="chart4" id="Chart15"></div>
+                <div class="chart4" id="Chart16"></div>
+                <br>
+            </div>
+
+                </div>
+                <br><p><span class="emphasized">Source: <a href="https://developer.ons.gov.uk/" target="_blank" rel="noreferrer">ONS API</a>.
+
+                <hr color=#32251B width="75%" size="8" align="center" opacity="0.5">
+
+                 <!-- Week 7-->
+
+                 <div id="onecolumn">
+                    <div class="title">
+                        <h2>Week 7: Interactive Maps</h2>
+             
+                
+                            <h3>Map 1: Europe Base</h3>
+                            <p>This is a base map of Europe, taken from <a href="https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/TopoJSON/europe.topojson" target="_blank" rel="noreferrer">Github</a></p>
+                            
+                            <div class="chart3" id="Chart17"></div>
+            
+                            <h3>Map 2: Inflation Choropleth</h3>
+                            <p>This map has had inflation data taken from the OECD added, including a slider that shows this for the last 20 years.</p>
+                            <div class="chart3" id="Chart18"> </div>
+                    
+                        </div>
+                       
+
+    <br><p><span class="emphasized">Sources: <a href="https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/TopoJSON/europe.topojson" target="_blank" rel="noreferrer">Github</a>, <a href="https://www.statista.com/statistics/225698/monthly-inflation-rate-in-eu-countries/" target="_blank" rel="noreferrer">Inflation Data</a>.
+
+
+    <br>
+                <hr color=#32251B width="75%" size="8" align="center" opacity="0.5">
+
+                 <!-- Week 8-->
+                 <div id="onecolumn">
+                    <div class="title">
+                        <h2>Week 8: Festival of Economics</h2>
+                    <p>After attending the Festival of Economics talk on "Britain's Decisive Decade", I examined two key claims made by the panel, charting the results.</p>
+            
+                    <h3>Productivity</h3>
+                            <p>Firstly, one key point of discussion was how to improve the UK's recent lagging productivity compared to the G7. The line chart below shows this, indexing all countries of the G7's productivity around 2015. Here we can see that the UK has made the lowest increase in relative productivity as of 2021.</p>. 
+                            <div class="chart3" id="Chart20"> </div>
+                               
+                            <h3>UK Inequality</h3>
+                            <p>The panel also discussed the high levels of inequality in the UK compared to the rest of western Europe. Using Gini Coefficient data, this can be seen on the choropleth map below. While the data for Eastern Europe is incomplete (taken from XXXXX), it is sufficient to support the statement.</p>
+                            
+                            <div class="chart3" id="Chart19"></div> 
+                            
+                    
+                        </div>
+                        <br><p><span class="emphasized">Sources: <a href="https://www.ons.gov.uk/economy/economicoutputandproductivity/productivitymeasures/bulletins/internationalcomparisonsofproductivityfinalestimates/2020" target="_blank" rel="noreferrer">G7 Productivity Data</a>, <a href="https://www.indexmundi.com/facts/indicators/SI.POV.GINI/rankings/europe" target="_blank" rel="noreferrer">Gini Coefficient Data</a>.</span></p>
+
+
+                        <hr color=#32251B width="75%" size="8" align="center" opacity="0.5">
+
+
+                        <!-- Week 9-->
+
+                        <div id="onecolumn">
+			<div class="title">
+				<h2>Week 9: Advanced Graphs</h2>
+                <h3>Music Streaming: Penetration Rate Bubble Chart</h3>
+                            <p>The first graph is a bubble map showing the relationship between GDP per capita and the penetration rate of music streaming services for 150 countries.The bubbles are then sized according to population, and coloured according to continent (the UK is highlighted separately for use in my project).</p>
+                            
+                            <div class="chart3" id="Chart21"></div> 
+                           
+            
+                            <h3>Music Streaming: Projected Penetration Rate Heat Map</h3>
+                            <p>The second graph uses projected music streaming penetration data to show the number of countries in each 2% interval, and how this will likely progress between 2017-2027. The vast majority of countries have low penetration rates, wiht this expected to rise but with significant disparities remaining.</p>. 
+
+                            <div class="chart3" id="Chart22"> </div>
+                            <br>
+                            <p><span class="emphasized">Sources: <a href="https://www.statista.com/outlook/dmo/digital-media/digital-music/music-streaming/worldwide#revenue" target="_blank" rel="noreferrer">Music Streaming Penetration Data</a>,<a href="https://worldpopulationreview.com/countries" target="_blank" rel="noreferrer">Population Data</a>, <a href="https://worldpopulationreview.com/country-rankings/gdp-per-capita-by-country" target="_blank" rel="noreferrer">GDP per Capita Data</a>.</span></p>
+                    
+                        </div>
+			</div>
+
+	    <br>
+
+        <hr color=#32251B width="75%" size="8" align="center" opacity="0.5">
+
+
+             <!-- Week 10/11-->
+             <div id="onecolumn">
+                <div class="title">
+                    <h2>Week 10/11: Machine Learning</h2>
+                    <h3>Classifying British Football Clubs</h3>
+                                <p>This graph looks at to what extent attendances and squad market values predict the league a club is in, comparing this to the league the club is currently in. It can be argued that clubs with different predicted leagues to their actual are over or under performing compared to their supporter base/squad value. </p>
+                                
+                                <div class="chart3" id="Chart23"></div> 
+
+                                <p>The graph appears to show that attendance and squad value as a moderately good predictor of league placement. In the EPL, Brentford, Fulham, and Crystal Palace appear to be overperforming as they are comparable to Championship clubs in terms of attendances and squad value, while Bournemouth is comparable to League 1 clubs. Similar patterns can be seen with Championship clubs who are EPL sized, and League 1 clubs that should be performing at Championship level. As a further study, I used the model to predict where Scottish footballing giants Rangers and Celtic would be in if they were to be included in the English football system- two clubs which are often seen as more comparable to top Premier League clubs. The results of this can be seen in the Colab link, showing that they are indeed comparable to Premier League clubs in terms of attendances and squad value.  </p>
+
+                                <h3>Clustering the Premier League and EFL</h3>
+                                <p>A common problem in English football (one that can be seen in the above graph as well) is the vast differences seen between top Premier League clubs and those at the bottom of the football pyramid. It is this kind of divergence that prompted talk of the European Super League. Clustering allows us to see general groupings across the English Football Leagues, and whether the traditional idea of a 'top 6' holds in terms of squad value and attendances.</p>
+                                <div class="chart3" id="Chart24"> </div>
+
+                                <br><br>
+                         <p>The 4 groupings can be generally be seen as categorising smaller clubs in the bottom 3 tiers of English Football (groups 0 and 3), smaller Premier league clubs and other historically well supported clubs such as Sunderland and Derby (group 1), and top Premier League clubs, stretching beyond the traditional 'big 6' to include Newcastle and West Ham (group 2). Interestingly, Chelsea are relegated from their generally accepted place at the top of English football to the second grouping in this model, likely due to their relatively low average attendance. </p>
+                            </div>
+                </div>
+               <br> <p> <a href="https://colab.research.google.com/drive/18bEVJwqMkTfvp6Rp440GUt8PuiSk1_o8?usp=sharing" target="_blank" rel="noreferrer">The Google Colab file containing the classification and clustering can be found here.</a></p>
+
+                <br><p><span class="emphasized">Source: <a href="https://www.transfermarkt.com/" target="_blank" rel="noreferrer">Attendances/Squad Market Value</a>.
+
+
+            
+ <br>
+
+ <hr color=#32251B width="75%" size="8" align="center" opacity="0.5">
+</div>
+
+</body>
+
+<!-- To Do:
+    Graph formatting checklist: titles, axes
+    Check weeks on dropbox- word counts/links
+    Check links/colabs
+    Tidy github/css/explain html
+    Line breaks
+
+    Week 7: Missing Inflation
+    Week 10: Add Rangers/Celtic to graph? 
+
+    Sort graphs for phone
+    Decide anchor start/middle
+ -->
+
+<script>
+    //Define charts:
+    var myChart1 = "Approval";
+    var myChart2 = "AgingPop";
+    var myChart3 = "IMF";
+    var myChart4 = "IMF GDP";
+    var myChart5 = "ER";
+    var myChart6 = "ERenc";
+    var myChart7 = "PLMarketValue";
+
+    var myChart8 = "ONS-ABEE.json1";
+    var myChart9 = "ONS-ADAK.json1";
+    var myChart10 = "ONS-ANSS.json1";
+    var myChart11 = "ONS-CPOE.json1";
+    var myChart12 = "ONS-DZLW.json1";
+    var myChart13 = "ONS-FDDP.json1";
+    var myChart14 = "ONS-GZSJ.json1";
+    var myChart15 = "ONS-MF6Q.json1";
+    var myChart16 = "ONS-IL65.json1";
+
+    var myChart17 = "EuropeMap";
+    var myChart18 = "EuropeInfSlider";
+
+    var myChart19 = "EuropeGini";
+    var myChart20 = "Product";
+
+    var myChart21 = "Music Bubble";
+    var myChart22 = "Music Heatmap";
+
+    var myChart23 = "Classification";
+    var myChart24 = "Clustering";
+
+
+
+   
+
+    // Embed charts:
+    vegaEmbed('#Chart1', myChart1);
+    vegaEmbed('#Chart2', myChart2);
+    vegaEmbed('#Chart3', myChart3);
+    vegaEmbed('#Chart4', myChart4);
+    vegaEmbed('#Chart5', myChart5);
+    vegaEmbed('#Chart6', myChart6);
+    vegaEmbed('#Chart7', myChart7);
+
+    vegaEmbed('#Chart8', myChart8);
+    vegaEmbed('#Chart9', myChart9);
+    vegaEmbed('#Chart10', myChart10);
+    vegaEmbed('#Chart11', myChart11);
+    vegaEmbed('#Chart12', myChart12);
+    vegaEmbed('#Chart13', myChart13);
+    vegaEmbed('#Chart14', myChart14);
+    vegaEmbed('#Chart15', myChart15);
+    vegaEmbed('#Chart16', myChart16);
+
+    vegaEmbed('#Chart17', myChart17);
+    vegaEmbed('#Chart18', myChart18);
+
+    vegaEmbed('#Chart19', myChart19);
+    vegaEmbed('#Chart20', myChart20);
+
+    vegaEmbed('#Chart21', myChart21);
+    vegaEmbed('#Chart22', myChart22);
+
+    vegaEmbed('#Chart23', myChart23);
+    vegaEmbed('#Chart24', myChart24);
+
+
+</script>
+
+</html>

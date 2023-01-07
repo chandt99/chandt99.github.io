@@ -1,62 +1,89 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+   
+"title": {
+  "text": "Approval ratings",
+  "subtitle": ["Do you approve or disapprove of the Government’s record to date?", "Source: YouGov", ""],
+  "subtitleFontStyle":"italic",
+  "subtitleFontSize":10,
+  "anchor": "start",
+  "color": "#cbc7cf",
+  "subtitleColor":"#cbc7cf"},
+
+  "config": {
+  "background":"#122b39",
+  "view": {"stroke": "transparent"}},
   
-    "data": {"url": "https://app.sportdataapi.com/api/v1/soccer/matches?apikey=b8bb8050-f3d3-11eb-808b-334144de1112&season_id=352&date_from=2020-09-19",
-    "format":{
-      "type": "json",
-      "property": "data"
-    }
-    },
+    "data": {
+    "url": "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/data/youGov_approval.csv"
+  },
+
+  "transform": [  
+    {"calculate":"year(datum.date)", "as": "year"},
   
-      "title": {
-      "text": "English Premier League 'Top 6' - Goals",
-      "subtitle":["Goals scored at home, 20/21 season",""],
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "white",
-      "subtitleColor":"white"
+    {"filter": "datum.year>=minYear"},
+    {"filter": "datum.year<=maxYear"},
+    
+    {"filter": "datum.y1!=0"}
+    ],
+
+  "params": [    
+    {"name":"minYear", "value":2020,
+       "bind":{
+         "input": "range",
+         "min": 2011, 
+         "max": 2022, 
+         "step": 1,
+         "name": "Start year:"}
     },
 
-    "config": {
-      "background":"rgb(28, 91, 98)",
-      "view": {"stroke": "transparent"}},
+    {"name":"maxYear", "value":2022,
+       "bind":{
+         "input": "range",
+         "min": 1979, 
+         "max": 2022, 
+         "step": 1,
+         "name": "End year:"}}],
+
   
-    "transform": [
-      {"filter":{"field":"home_team.name", "oneOf": ["Chelsea FC", "Liverpool FC", "Manchester City", "Manchester United", "Tottenham Hotspur", "Leicester City"]}
-    }
-    ],
+  "repeat": {"layer": ["Approve", "Disapprove"]},
+ 
+  "spec": {
+      
+      "height": 300,
+      "width": 280,
+
+      "mark": {
+          "type":"line",
+          "strokeWidth":2},    
+
+      "encoding": {
+          "x": {
+          "field": "date",
+          "type": "temporal",
+          "title": null,
+          "axis": {
+          "grid": false,
+          "labelColor":"#cbc7cf"}},
   
-    "mark": {
-      "type":"bar",
-      "color":"#ce713b"},
+          "y": {
+          "field": {"repeat": "layer"},               
+          "type": "quantitative",
+          "title":null,
+          "axis": {
+              "grid": false,
+              "labelColor":"#cbc7cf"}},
   
-    "height":104,
-    "width":148,
-    "padding":{
-      "top":0,
-      "bottom":0,
-      "right":0,
-      "left":0
-    },
-    
-    "encoding": {
-  
-      "x": {
-        "field": "match_start", 
-        "type": "temporal",
-        "title":null},
-  
-      "y": {
-        "field": "stats.home_score", 
-        "type": "quantitative",
-        "title":"Goals"},
-  
-       "facet":{
-         "field": "home_team.name",
-         "columns": 2,
-         "title":null,
-         "spacing":15
-       } 
-    }
-  }
+          "color": {
+              "datum": {"repeat": "layer"},
+              "scale": {"range": ["red", "orange", "blue"]},
+              "legend":{
+                "labxelExpr": "{'us10y': 'US', 'y10': 'UK', 'german10y':'Germany'}[datum.label]",
+                "orient": "top-left",
+                "labelColor":"#cbc7cf",
+                "title":null,
+                "titleColor":"#cbc7cf"}
+              } 
+          }
+        }
+}

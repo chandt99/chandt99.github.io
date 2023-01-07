@@ -8,9 +8,7 @@
       "anchor": "start",
       "color": "white"},
 
-      "config": {
-        "background":"rgb(28, 91, 98)",
-        "view": {"stroke": "transparent"}},
+
   
 
         "data": {

@@ -1,8 +1,8 @@
 {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  
   "title": {
-     "text": "Covid Cases: English regions - click on legend",
-     "subtitle":"New cases by specimen date. Rolling weekly rate per 100k population.",
+     "text": "UK Muisc Revenue Streams",
+     "subtitle":"Click on the legend to highlight individual areas",
      "subtitleFontStyle":"italic",
      "subtitleFontSize":10,
      "anchor": "start",
@@ -13,7 +13,7 @@
    "description": "Coronavirus cases",
  
    "data": {
-     "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/MusicRev1.csv",
+     "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/MusicRev.csv",
      "format": {"type": "csv"}
    },
    
@@ -38,7 +38,7 @@
      "y": {
        "field": "Revenue",
        "type": "quantitative",
-       "title": null,
+       "title": "Revenue (£)",
        "axis":{"grid":false}
        },
  

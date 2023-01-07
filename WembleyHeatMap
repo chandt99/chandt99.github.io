@@ -1,0 +1,26 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/LGM%20Retail.csv"},
+
+  "title": {
+    "text": "Retail Activity Heat Map: All Days",
+    "subtitle":["Shows the frequency of daily retail activity percentages for each London borough during the pandemic","Darker regions indicate a more common level of daily retail activity across boroughs during the pandemic", "Feb 2020-Oct 2022"],
+    "subtitleFontStyle":"italic",
+    "anchor": "middle",
+    "subtitleFontSize":10,
+    "color": "black"},
+
+    "width": 250,
+
+  "mark": {"type":"tick"},
+  "encoding": {
+    "x": {"field": "Retail", "type": "quantitative", "title":"Retail Activity"},
+     "color": {
+      "legend":null,
+      "aggregate": "count",
+      "field": "Retail",
+      "type": "quantitative",
+      "title": "Price",
+      "scale":{"scheme":"yelloworangebrown"}
+    }}
+}

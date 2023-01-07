@@ -7,8 +7,8 @@
   "data": {"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/ClubClustering.csv"},
   "mark": "point",
   "encoding": {
-    "x": {"field": "MV", "type": "quantitative"},
-    "y": {"field": "Attendance", "type": "quantitative"},
+    "x": {"field": "MV", "type": "quantitative","axis":{"title":"Squad Market Value (Millions, €)"}},
+    "y": {"field": "Attendance", "type": "quantitative", "axis":{"title":"Average Attendance"}},
     "color":{"field":"predicted_clusters","type": "nominal","title":"Club Groupings"},
     "tooltip":[{"field":"Club"}, {"field":"MV","title":"Squad Market Value"}, {"field":"Attendance","title":"Average Attendance"}]
   }

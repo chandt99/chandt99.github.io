@@ -1,0 +1,62 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height": 500,
+    "width": 540,
+    "title": {"text": "Map of London 30/06/2022", "anchor": "start", "color": "white"},
+    "config": {
+      "background": "rgb(28, 91, 98)",
+      "view": {"stroke": "transparent"}
+    },
+
+    "layer":[
+      {
+    "data": {
+      "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/WembleyMusicDates1.csv"
+    },
+    "transform": 
+      [
+      {
+        "lookup": "Borough",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/london_boroughs.json",
+            "format": {"type": "json", "property": "features"}
+          },
+          "key": "properties.name",
+          "fields": ["properties", "type", "geometry"]
+        }
+      }
+    ],
+
+
+    "projection": {"type": "mercator"},
+    "mark": 
+    {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
+    "encoding": {
+      "color": {
+        "field": "Retail",
+        "type": "quantitative",
+        "scale": {"scheme": "blueorange"}
+      },
+      "tooltip": [
+        {"field": "properties.name", "title": "Borough"},
+        {"field": "Retail"}
+      ]
+    }},
+
+
+  {
+      "data": {
+        "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/coordinates1.csv"
+      },
+      "projection": {"type": "mercator"},
+      "mark": "circle", 
+      "encoding": {
+        "longitude": {"field": "Long", "type": "quantitative"},
+        "latitude": {"field": "Lat", "type": "quantitative"},
+        "tooltip":{"field":"Place"},
+        "color":{"value":"black"}
+      }
+    }
+  ]
+}

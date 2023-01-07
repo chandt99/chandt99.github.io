@@ -4,16 +4,14 @@
     "description": "LA finance: central government debt",
   
      "title": {
-      "text": "central government debt",
+      "text": "Central Government Debt",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
       "color": "black"
     },
     
-    "config": {
-      "background":"rgb(28, 91, 98)",
-      "view": {"stroke": "transparent"}},
+   
     "data": {
       "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/ONS-ABEE.json",
       "format":{"type":"json","property":"months"}},

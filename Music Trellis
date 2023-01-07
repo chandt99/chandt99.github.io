@@ -1,0 +1,31 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Stock prices of four large companies as a small multiples of area charts.",
+  "transform": [{"filter": "datum.symbol !== 'GOOG'"}],
+  "width": 300,
+  "height": 100,
+  "data": {"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/MSPR.csv"},
+  "mark": "line",
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "Time",
+      "axis": {"grid": false}
+    },
+    "y": {
+      "field": "Penetration Rate",
+      "type": "quantitative",
+      "title": "Price",
+      "axis": {"grid": false}
+    },
+    "color": {
+      "field": "Countries",
+      "type": "nominal",
+      "legend":null    },
+ 
+    "facet": {"field":"Continent",
+              "type": "nominal",
+              "columns": 2}
+  }
+}

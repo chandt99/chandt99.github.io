@@ -1,0 +1,84 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+"title": {
+    "text": "Effect of Live Music on the Local Economy",
+    "subtitle":["Shows the activity in retail stores as a percentage change from the normal baseline activity for each London Borough","The black circle shows Wembley Stadium"],
+    "subtitleFontStyle":"italic",
+    "anchor": "start",
+    "subtitleFontSize":10,
+    "color": "black"},
+
+
+  "config": {
+    "background":"white",
+    "view": {"stroke": "transparent"}},
+  
+  "width": 500,
+  "height": 350,
+
+  "params": [
+    {
+      "name": "Select",
+      "value": "29/06/2022",
+      "bind": {
+        "input": "select",
+        "options": [
+          "29/06/2022",
+          "30/06/2022"
+        ]
+      }
+    }
+  ],
+  "layer":[{
+  "data": {
+    "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/london_boroughs.json",
+        "format": {"type": "json", "property": "features"}},
+
+  "transform": [{
+    "lookup": "properties.name",
+    "from": {
+      "key": "Borough",
+      "fields": ["29/06/2022", "30/06/2022"],
+      "data": {"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/Wembley%202%20dates1.csv"}}
+      },
+
+
+
+    {"calculate": "datum[Select]","as": "yearSelected"}
+
+    
+      ],
+
+ "projection": {"type": "mercator"},
+    "mark": 
+    {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
+    "encoding": {
+      "color": {
+        "field": "yearSelected",
+        "type": "quantitative",
+        "scale": {"scheme": "blueorange"},
+        "legend":{"title":"Retail Activity (%)"}
+      },
+      "tooltip": [
+        {"field": "properties.name", "title": "Borough"},
+        {"field": "yearSelected", "title":""}
+      ]
+    }
+  },
+   {
+      "data": {
+        "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/coordinates1.csv"
+      },
+      "projection": {"type": "mercator"},
+      "mark": {"type": "circle", "size":50},
+      "encoding": {
+        "longitude": {"field": "Long", "type": "quantitative"},
+        "latitude": {"field": "Lat", "type": "quantitative"},
+        "tooltip":{"field":"Place"},
+        "color":{"value":"black"}
+      }
+    }
+  ]
+
+
+}

@@ -1,19 +1,17 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
-    "description": "Lending to Private Sector + ROTW",
+    "description": "Lending to Private Sector ",
   
      "title": {
-      "text": "Lending to Private Sector + ROTW",
+      "text": "Lending to Private Sector",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
       "color": "black"
     },
     
-    "config": {
-      "background":"rgb(28, 91, 98)",
-      "view": {"stroke": "transparent"}},
+   
     "data": {
       "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/ONS-IL65.json",
       "format":{"type":"json","property":"months"}},

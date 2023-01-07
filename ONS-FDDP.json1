@@ -11,9 +11,7 @@
       "color": "black"
     },
     
-    "config": {
-      "background":"rgb(28, 91, 98)",
-      "view": {"stroke": "transparent"}},
+    
     "data": {
       "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/ONS-FDDP.json",
       "format":{"type":"json","property":"months"}},

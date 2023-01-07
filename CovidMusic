@@ -1,0 +1,116 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/MusicCovidLong3.csv"
+  },
+
+  "title": {
+    "text": "Gross Value Added: Pandemic",
+    "subtitle":["Grey area shows first lockdown, Index = 2019"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+ 
+      
+  "width": 400,
+  "height": 300,
+  "layer": [
+    {
+      "encoding": {
+        "x": {"field": "Date", "type": "temporal", "title":"Time","axis":{"grid": false}},
+        "y": {"field": "Index", "type": "quantitative", "scale":{"domainMin":30, "domainMax":120}, "title":"Index"},
+        "color": {"field": "Category", "type": "nominal"}
+      },
+      "layer": [
+        {"mark": "line"},
+        {
+          "params": [{
+            "name": "label",
+            "select": {
+              "type": "point",
+              "encodings": ["x"],
+              "nearest": true,
+              "on": "mouseover"
+            }
+          }],
+          "mark": "point",
+          "encoding": {
+            "opacity": {
+              "condition": {
+                "param": "label",
+                "empty": false,
+                "value": 1
+              },
+              "value": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transform": [{"filter": {"param": "label", "empty": false}}],
+      "layer": [
+        {
+      "mark": {"type":"rect","opacity":0.3, "color":"dimgrey"},
+      "data": {
+        "values": [
+          {
+            "start": 1583020800000,
+            "end": 1590969600000
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "start",
+          "type": "temporal"
+        },
+        "x2": {
+          "field": "end"
+        }
+      }
+    },
+    {
+      "data": {"values": [{}]},
+      "mark": {"type": "rule", "strokeDash": [2, 2], "size": 1},
+      "encoding": {
+        "y": {"datum": 100}
+      }
+    },
+        {
+          "mark": {"type": "rule", "color": "gray"},
+          "encoding": {
+            "x": {"type": "temporal", "field": "Date", "aggregate": "min"}
+          }
+        },
+        {
+          "encoding": {
+            "text": {"type": "quantitative", "field": "Index"},
+            "x": {"type": "temporal", "field": "Date"},
+            "y": {"type": "quantitative", "field": "Index"}
+          },
+          "layer": [
+            {
+              "mark": {
+                "type": "text",
+                "stroke": "white",
+                "strokeWidth": 2,
+                "align": "left",
+                "dx": 5,
+                "dy": -5
+              }
+            },
+            {
+              "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5},
+              "encoding": {
+                "color": {"type": "nominal", "field": "Category"}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

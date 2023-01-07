@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/Music%20Revenue%20streams.csv"},
+  "mark":{"type": "bar","size":10},
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "Year"
+    },
+    "y": {
+      "field":"Sales percentage",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Type",
+      "type": "nominal"
+      }    
+}}

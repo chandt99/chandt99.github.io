@@ -122,9 +122,8 @@ h5 {
     border-width: 2px;
     border-style:ridge;
     border-color: rgb(0, 0, 0);
-    position:relative;
-    left:50px;
-    top: 50px;
+    position:auto;
+    
 
    
 }

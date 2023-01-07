@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple pie chart with embedded data.",
+
+   "title": {
+    "text": "Global Music Market",
+    "subtitle":["The retail market value of the largest music markets by country","Global Market Value: $17.27 billion",""],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+   "height": 355,
+  "width": 355,
+
+  "data": {
+   "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/Global%20Marketsx.csv"
+  },
+  "params": [
+    {"name": "highlight", "select": {"type": "point", "on":"mouseover", "toggle":true}}
+  ],
+  "mark": {"type": "arc", "stroke": "white", "cursor": "pointer", "innerRadius":30},
+  "encoding": {
+    "theta": {"field": "Market Value ($, Millions)", "type": "quantitative"},
+        "order": {"field": "Market Value ($)", "type": "quantitative", "sort": "descending"},
+    "tooltip": [{"field": "Market Value ($, Millions)", "title": "Market Value ($)"},
+    {"field":"% of Global"},
+    {"field":"Market", "title":"Country"}],
+    "color": {"field": "Market", "type": "nominal", "sort":"ascending", "legend":null,"scale":{"scheme":"category20b"}},
+    "fillOpacity": {
+      "condition": [{"param": "highlight", "value": 1}],
+      "value": 0.3
+    },
+    "strokeWidth": {
+      "condition": [{"param": "highlight", "empty": false, "value": 5}],
+      "value": 0
+    }
+  }
+}

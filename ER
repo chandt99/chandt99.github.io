@@ -23,8 +23,8 @@
  
 
   "encoding":{
-    "x":{"field":"Time","type":"temporal"},
-    "y":{"field":"Value", "type":"quantitative"},
+    "x":{"field":"Time","type":"temporal", "axis":{"grid":false}, "timeUnit":"monthdate", "title":"Time"},
+    "y":{"field":"Value", "type":"quantitative","axis":{"grid":false}},
     "color":{"field":"Exchange Rate"}
   },
   "config": {"legend": {"orient": "top-right"}

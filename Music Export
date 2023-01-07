@@ -1,0 +1,56 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "data": {"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/UK%20Music%20Export.csv"},
+
+  "title": {
+    "text": "UK Music Industry: Top Importers",
+    "subtitle":["Top market for UK music exports showing absolute value and % change",""],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black",
+    "subtitleColor":"black"
+  },
+
+  "height": 300,
+  "width": 300,
+
+  "layer": [
+    {
+      "mark": {"type":"bar","color": "blue"},
+      "encoding": {
+        "x": {"field": "Country", "type": "nominal", "sort":"descending", "axis":{"title": null}},
+        "y": {
+          "field":"Earnings from Overseas",
+          "axis": {"titleColor":"blue"},
+          "type": "quantitative",
+          "title": "Earnings from Overseas (£)"
+        },
+        "tooltip":[
+          {"field":"Country", "title":null},
+        {"field":"% Annual Growth"},
+        {"field":"Earnings from Overseas"}]
+      }
+    },
+    {
+      "layer": [
+        {
+          "mark":{ "type":"point", "interpolate": "monotone", "color": "darkorange", "size": 55},
+          "encoding": {
+            "tooltip":[
+          {"field":"Country"},
+        {"field":"% Annual Growth"},
+        {"field":"Earnings from Overseas"}],
+            "y": {
+              "field": "% Annual Growth",
+              "type": "quantitative",
+                        "axis": {"titleColor":"darkorange"}
+},
+              "x":{"field":"Country", "sort":"descending"}
+          }
+        }
+      ]
+    }
+  ],
+  "resolve": {"scale": {"y": "independent"}}
+}

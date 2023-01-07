@@ -1,0 +1,66 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/MSPR%20GDPPC1.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true
+      },
+      "encoding": {
+        "x": {
+          "field": "MSPR (%)",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "GDPPC",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "firebrick"
+      },
+      "transform": [
+        {
+          "regression": "GDPPC",
+          "on": "MSPR (%)"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "MSPR (%)",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "GDPPC",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "regression": "GDPPC",
+          "on": "MSPR (%)",
+          "params": true
+        },
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "firebrick",
+        "x": "width",
+        "align": "right",
+        "y": -5
+      },
+      "encoding": {
+        "text": {"type": "nominal", "field": "R2"}
+      }
+    }
+  ]
+}

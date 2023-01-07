@@ -4,11 +4,11 @@
     "data": {"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/DP_LIVE_05122022181002018.csv"},
   
     "height": 500,
-    "width": 300,
+    "width": 500,
   
     "encoding": {
-      "x": {"field": "TIME", "type": "temporal", "title": "date"},
-      "y": {"field": "Value", "type": "quantitative", "title": "price", "scale":{"domain":[94,112]}},
+      "x": {"field": "TIME", "type": "temporal", "title": "Year"},
+      "y": {"field": "Value", "type": "quantitative", "title": "Productivity (Index = 2015)", "scale":{"domain":[94,112]}},
 
   
       "color": {

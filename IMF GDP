@@ -6,12 +6,9 @@
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
-      "color": "white",
-      "subtitleColor":"white"},
+      "color": "black",
+      "subtitleColor":"black"},
 
-      "config": {
-        "background":"rgb(28, 91, 98)",
-        "view": {"stroke": "transparent"}},
   
   "data":{"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/IMF%20data%20adjusted%20for%20GDP.csv"},
 

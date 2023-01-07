@@ -37,15 +37,17 @@
 
 <body>
     <div class="myWeek1">
-        <h1>Week 9: Machine Learning </h1>
+        <h1>Week 10/11: Machine Learning </h1>
         
-        <h3>Map 1: CHART 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, placeat!.</p>
+        <h3>Classifying English Football Clubs</h3>
+        <p>This graph looks at to what extent attendances and squad market values predict the league a club is in, comparing this to the league the club is currently in. It can be argued that clubs with different predicted leagues to their actual are over or under performing compared to their supporter base/squad value.  </p>
         <div class="chart2" id="Chart1"></div>
+        <p>The graph appears to show that attendance and squad value as a moderately good predictor of league placement. In the EPL, Brentford, Fulham, and Crystal Palace appear to be overperforming as they are comparable to Championship clubs in terms of attendances and squad value, while Bournemouth is comparable to League 1 clubs. Similar patterns can be seen with Championship clubs who are EPL sized, and League 1 clubs that should be performing at Championship level. As a further study, I used the model to predict the leagues SPL giants Rangers and Celtic would be in if they were to be included in the English football system- two clubs which are often seen as more comparable to top Premier League clubs. The results of this can be seen in the Colab link, showing that they are indeed comparable to Premier League clubs in terms of attendances and squad value.  </p>
 
-        <h3>Map 2: CHART 2</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, placeat!.</p>
+        <h3>Clustering</h3>
+        <p>A common problem in English football (one that can be seen in the above graph as well) is the vast differences seen between top Premier League clubs and those at the bottom of the football pyramid. It is this kind of divergence that prompted talk of the European Super League. Clustering allows us to see general groupings across the English Football Leagues, and whether the traditional idea of a 'top 6' holds in terms of squad value and attendances.</p>
         <div class="chart2" id="Chart2"></div>
+        <p>The 4 groupings can be generally be seen as categorising smaller clubs in the bottom 3 tiers of English Football (groups 0 and 3), smaller Premier league clubs and other historically well supported clubs such as Sunderland and Derby (group 1), and top Premier League clubs, stretching beyond the traditional 'big 6' to include Newcastle and West Ham (group 2). Interestingly, Chelsea are relegated from their generally accepted place at the top of English football to the second grouping in this model, likely due to their relatively low average attendance. </p>
 
     </div> 
 </body>
@@ -53,8 +55,8 @@
 
 <script>
     //Define charts:
-    var myChart1 = "";
-    var myChart2 = "";
+    var myChart1 = "Classification";
+    var myChart2 = "Clustering";
     
    
 
@@ -67,5 +69,9 @@
 </html>
 
 <!-- To Do:
-    
+    Axis titles
+    Graph backgrounds
+    Link to colabs
+    Check word counts
+    Put MV in millions
  -->

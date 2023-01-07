@@ -1,11 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-"config": {
-  "background":"rgb(28, 91, 98)",
-  "view": {"stroke": "transparent"},
-"legend": {"orient": "top-right"}},
-  
+
 
   "data":{
     "values":[
@@ -27,11 +23,12 @@
  
 
   "encoding":{
-    "x":{"field":"Time","type":"temporal"},
+    "x":{"field":"Time","type":"temporal", "timeUnit":"monthdate", "title":"Time"},
     "y":{"field":"Value", "type":"quantitative"},
     "color":{"field":"Exchange Rate"},
     "tooltip":[{"field":"Exchange Rate"},
     {"field":"Pound-Euro ER"},
-    {"field":"Pound-Dollar ER"}]
+    {"field":"Pound-Dollar ER"},
+    {"field":"Time", "timeUnit":"monthdate"}]
   }
 }

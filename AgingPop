@@ -17,12 +17,10 @@
     
     },
 
-    "config": {
-      "background":"rgb(28, 91, 98)",
-      "view": {"stroke": "transparent"}},
+
   
-    "height": 310,
-    "width": 293,
+    "height": 330,
+    "width": 350,
     
     "mark": {"type": "line", "width":10, "color": "#002fa7"},
   

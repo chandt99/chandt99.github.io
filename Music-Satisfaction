@@ -1,0 +1,84 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/Life%20satisfaction%20Music.csv"
+  },
+
+    "width": 300,
+  "height": 300,
+
+  "title": {
+  "text": "Regression: Music Consumption vs Life Satisfaction",
+  "anchor": "start",
+  "color": "black",
+  "subtitleColor":"black"},
+
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": false,
+        "color":"blue"
+      },
+      "encoding": {
+        "x": {
+          "field": "Music Streaming Penetration Rate",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Life Satisfaction",
+          "type": "quantitative",
+          "scale":{"domain": [4,8]}
+        },
+          "tooltip":[
+          {"field":"Countries","title":"Country"},
+          {"field":"Life Satisfaction"},
+          {"field":"Music Streaming Penetration Rate", "title":"Streaming (%)"}]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "red"
+      },
+      "transform": [
+        {
+          "regression": "Music Streaming Penetration Rate",
+          "on": "Life Satisfaction"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Music Streaming Penetration Rate",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Life Satisfaction",
+          "type": "quantitative"
+        }
+
+          
+      }
+    },
+    {
+      "transform": [
+        {
+          "regression": "Life Satisfaction",
+          "on": "Music Streaming Penetration Rate",
+          "params": true
+        },
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "firebrick",
+        "x": "width",
+        "align": "right",
+        "y": -5
+      },
+      "encoding": {
+        "text": {"type": "nominal", "field": "R2"}
+      }
+    }
+  ]
+}

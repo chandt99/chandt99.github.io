@@ -1,0 +1,74 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+  "text": "Music Streaming: Penetration Rate Heat Map  ",
+  "subtitle": ["The projected proportion of the population of 150 countries with a music streaming subscription", "The line shows the Penetration Rate of the United Kingdom"],
+  "subtitleFontStyle":"italic",
+  "subtitleFontSize":10,
+  "anchor": "start",
+  "color": "black",
+  "subtitleColor":"black"},
+
+  "data": {"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/MSPR.csv"},
+  "transform": [{
+    "filter": {"and": [
+      {"field": "Year", "valid": true},
+      {"field": "Penetration Rate", "valid": true}
+    ]}
+  }],
+  "layer": [
+    
+    {
+      "mark": "rect",
+  "width": 350,
+  "height": 350,
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "timeUnit":"year",
+      "title":"Year"
+    },
+    
+    "y": {
+      "bin": {"maxbins": 40},
+      "field": "Penetration Rate",
+      "type": "quantitative",
+      "title":"Penetration Rate"
+    },
+    "color": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "scale":{"scheme":"lighttealblue"},
+      "title":"No. of Countries",
+      "legend":{
+        "orient":"right"      
+        }
+        
+    }
+  }
+},
+{"mark":{"type":"line",
+"color":"black",
+"opacity":0.5,
+"strokeWidth":6,
+"radius":100},
+"data":{"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/MSPR%20UK.csv"},
+"encoding": {
+  "x":{
+    "field":"Year",
+    "type": "temporal"
+  },
+  "y":{
+    "field":"Penetration Rate",
+    "type": "quantitative"
+  },
+  "tooltip":[
+    {"field":"Countries"},
+    {"field":"Penetration Rate"},
+    {"field":"Year", "timeUnit":"year","title":"Year"}]
+  
+}}
+]
+}
