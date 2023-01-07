@@ -153,12 +153,12 @@
 2019,Bulgaria,3.103729448
 2020,Bulgaria,1.672440969
 2021,Bulgaria,3.297744353
-2000,Bosnia and Herzegovina,null
-2001,Bosnia and Herzegovina,null
-2002,Bosnia and Herzegovina,null
-2003,Bosnia and Herzegovina,null
-2004,Bosnia and Herzegovina,null
-2005,Bosnia and Herzegovina,null
+2000,Bosnia and Herzegovina,0
+2001,Bosnia and Herzegovina,0
+2002,Bosnia and Herzegovina,0
+2003,Bosnia and Herzegovina,0
+2004,Bosnia and Herzegovina,0
+2005,Bosnia and Herzegovina,0
 2006,Bosnia and Herzegovina,6.125566156
 2007,Bosnia and Herzegovina,1.500777106
 2008,Bosnia and Herzegovina,7.427043103
@@ -549,7 +549,7 @@
 2019,Iceland,3.013971792
 2020,Iceland,2.847924015
 2021,Iceland,4.444239702
-2000,Hungary,2.537685321
+2000,Italy,2.537685321
 2001,Italy,2.785165427
 2002,Italy,2.465323192
 2003,Italy,2.672555528
@@ -592,7 +592,7 @@
 2018,Kazakhstan,6.019130966
 2019,Kazakhstan,5.245476796
 2020,Kazakhstan,6.749001838
-2021,Kazakhstan,null
+2021,Kazakhstan,0
 2000,Liechtenstein,null
 2001,Liechtenstein,null
 2002,Liechtenstein,null
@@ -725,12 +725,12 @@
 2019,Malta,1.642060018
 2020,Malta,0.638544957
 2021,Malta,1.497892179
-2000,Montenegro,null
-2001,Montenegro,null
-2002,Montenegro,null
-2003,Montenegro,null
-2004,Montenegro,null
-2005,Montenegro,null
+2000,Montenegro,0
+2001,Montenegro,0
+2002,Montenegro,0
+2003,Montenegro,0
+2004,Montenegro,0
+2005,Montenegro,0
 2006,Montenegro,2.924512581
 2007,Montenegro,4.347122157
 2008,Montenegro,8.758727696
@@ -1032,10 +1032,10 @@
 2018,Ukraine,10.95185594
 2019,Ukraine,7.886717456
 2020,Ukraine,2.732492094
-2021,Ukraine,null
-2000,Kosovo,null
-2001,Kosovo,null
-2002,Kosovo,null
+2021,Ukraine,0
+2000,Kosovo,0
+2001,Kosovo,0
+2002,Kosovo,0
 2003,Kosovo,-1.084812623
 2004,Kosovo,-1.064726966
 2005,Kosovo,-1.385189132
