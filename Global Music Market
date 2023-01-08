@@ -3,8 +3,8 @@
   "description": "A simple pie chart with embedded data.",
 
    "title": {
-    "text": "Global Music Market",
-    "subtitle":["The retail market value of the largest music markets by country","Global Market Value: $17.27 billion",""],
+    "text": "Figure 2: Global Music Market",
+    "subtitle":["The retail value of the largest music markets by country","Global Market Value: $17.27 billion",""],
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start",

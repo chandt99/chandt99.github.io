@@ -1,7 +1,7 @@
 { "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
     "title": {
-      "text": "Music Streaming Penetration Rate vs GDP per Capita (2022)",
+      "text": "Figure 5: Music Streaming Penetration Rate vs GDP per Capita (2022)",
       "subtitle":["The penetration rate shows the % of a population with a music streaming account","Size of points shows population", ""],
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
@@ -52,7 +52,7 @@
       "color":{
         "field":"Continent",
   
-        "scale":{"scheme":"paired"}
+        "scale":{"domain":["Asia", "Africa","Europe","North America","Oceania","South America","United Kingdom*"], "range":["#3A3B75","darkorange","#E0BC63","purple","pink","green","red"]}
       },
 
       "tooltip":[

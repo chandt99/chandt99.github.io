@@ -3,7 +3,7 @@
   "data": {"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/UK%20Music%20Export.csv"},
 
   "title": {
-    "text": "UK Music Industry: Top Importers",
+    "text": "Figure 3: Top Importers for the UK Music Industry",
     "subtitle":["Top market for UK music exports showing absolute value and % change",""],
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
@@ -17,12 +17,12 @@
 
   "layer": [
     {
-      "mark": {"type":"bar","color": "blue"},
+      "mark": {"type":"bar","color": "#3A3B75"},
       "encoding": {
         "x": {"field": "Country", "type": "nominal", "sort":"descending", "axis":{"title": null}},
         "y": {
           "field":"Earnings from Overseas",
-          "axis": {"titleColor":"blue"},
+          "axis": {"titleColor":"#3A3B75"},
           "type": "quantitative",
           "title": "Earnings from Overseas (£)"
         },
@@ -35,7 +35,7 @@
     {
       "layer": [
         {
-          "mark":{ "type":"point", "interpolate": "monotone", "color": "darkorange", "size": 55},
+          "mark":{ "type":"point", "interpolate": "monotone", "color": "#E0BC63", "size": 55},
           "encoding": {
             "tooltip":[
           {"field":"Country"},
@@ -44,7 +44,7 @@
             "y": {
               "field": "% Annual Growth",
               "type": "quantitative",
-                        "axis": {"titleColor":"darkorange"}
+                        "axis": {"titleColor":"#E0BC63"}
 },
               "x":{"field":"Country", "sort":"descending"}
           }

@@ -5,7 +5,7 @@
   },
 
   "title": {
-    "text": "Gross Value Added: Pandemic",
+    "text": "Figure 1: Gross Value Added (Pandemic)",
     "subtitle":["Grey area shows first lockdown, Index = 2019"],
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,

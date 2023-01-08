@@ -1,8 +1,8 @@
 {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
 "title": {
-    "text": "Effect of Live Music on the Local Economy",
-    "subtitle":["Shows the activity in retail stores as a percentage change from the normal baseline activity for each London Borough","The black circle shows Wembley Stadium"],
+    "text": "Figure 6: Effect of Live Music on the Local Economy",
+    "subtitle":["Shows retail stores as a percentage change from the normal baseline activity for each London Borough","The black circle shows Wembley Stadium"],
     "subtitleFontStyle":"italic",
     "anchor": "start",
     "subtitleFontSize":10,
@@ -56,7 +56,7 @@
       "color": {
         "field": "yearSelected",
         "type": "quantitative",
-        "scale": {"scheme": "blueorange"},
+        "scale": {"scheme": "magma"},
         "legend":{"title":"Retail Activity (%)"}
       },
       "tooltip": [

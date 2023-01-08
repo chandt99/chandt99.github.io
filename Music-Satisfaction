@@ -8,7 +8,7 @@
   "height": 300,
 
   "title": {
-  "text": "Regression: Music Consumption vs Life Satisfaction",
+  "text": "Figure 7: Music Consumption vs Life Satisfaction",
   "anchor": "start",
   "color": "black",
   "subtitleColor":"black"},
@@ -18,7 +18,7 @@
       "mark": {
         "type": "point",
         "filled": false,
-        "color":"blue"
+        "color":"#3A3B75"
       },
       "encoding": {
         "x": {
@@ -39,7 +39,7 @@
     {
       "mark": {
         "type": "line",
-        "color": "red"
+        "color": "#E0BC63"
       },
       "transform": [
         {

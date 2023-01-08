@@ -1,7 +1,7 @@
 {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
  
   "title": {
-     "text": "UK Muisc Revenue Streams",
+     "text": "Figure 4: UK Muisc Revenue Streams",
      "subtitle":"Click on the legend to highlight individual areas",
      "subtitleFontStyle":"italic",
      "subtitleFontSize":10,
@@ -45,7 +45,7 @@
      "color": {
        "field": "Type",
        "type": "nominal",
-       "scale": {"scheme": "plasma"},
+       "scale": {"scheme": "magma"},
        "title": null,
        "legend": {
          "orient": "bottom",

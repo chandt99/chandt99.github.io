@@ -4,7 +4,7 @@
 
   "title": {
     "text": "Retail Activity Heat Map: All Days",
-    "subtitle":["Shows the frequency of daily retail activity percentages for each London borough during the pandemic","Darker regions indicate a more common level of daily retail activity across boroughs during the pandemic", "Feb 2020-Oct 2022"],
+    "subtitle":["Shows the frequency of daily retail activity percentages for all London borough during the pandemic","Lighter regions (e.g. -20) indicate a more common value of daily retail activity across the dataset", "Feb 2020-Oct 2022"],
     "subtitleFontStyle":"italic",
     "anchor": "middle",
     "subtitleFontSize":10,
@@ -21,6 +21,6 @@
       "field": "Retail",
       "type": "quantitative",
       "title": "Price",
-      "scale":{"scheme":"yelloworangebrown"}
+      "scale":{"scheme":"magma"}
     }}
 }
