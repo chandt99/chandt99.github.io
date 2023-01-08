@@ -2,7 +2,12 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
    
     "data": {"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/DP_LIVE_05122022181002018.csv"},
-  
+
+    "title": {
+      "text": "G7 Productivty (index = 2015)",
+      "anchor": "start",
+      "color": "black",
+      "subtitleColor":"black"},
     "height": 500,
     "width": 500,
   

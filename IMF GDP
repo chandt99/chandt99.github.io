@@ -2,7 +2,7 @@
 
   "title": {
       "text": "IMF Lending Outstanding Adjusted for Global GDP",
-      "subtitle":"Credit outstanding to all members as a % of global GDP",
+      "subtitle":["Credit outstanding to all members as a % of global GDP","Note: IMF loan value and GDP have been converted to current $US values."],
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
@@ -13,8 +13,8 @@
   "data":{"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/IMF%20data%20adjusted%20for%20GDP.csv"},
 
   
-  "height": 302,
-  "width": 292,
+  "height": 300,
+  "width": 300,
 
   "mark": {
     "type": "bar",

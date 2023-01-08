@@ -3,16 +3,15 @@
 
     <!-- Mobile compatibility has been achieved through @media tag in CSS file -->
 
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Title for the page -->
+    <!-- Title -->
     <title>Taran Chand Data Science: Week 1</title>
 
-    <!-- Link to my style sheet -->
+    <!--style sheet -->
     <link rel="stylesheet" href="New1.css">
 
     <!--The next three lines allow the Vega embed-->
@@ -51,9 +50,14 @@
 
 		<div id="onecolumn">
 			<div class="title">
-				<h2>UK Music Industry: Post-COVID (Intro)</h2>
+				<h2>The UK Music Industry as an Avenue for Growth</h2>
 			</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem.</p>
+			<p>The UK music industry is a key contributor to the economy, encouraging domestic spending, attracting tourism, and acting as an export to bring in foreign currency. However, a collection of exogenous shocks has left the industry precariously placed; COVID-19 stifled demand, Brexit has increased barriers for artists abroad, and the government has further slashed public arts funding.
+            <br>
+                This data exploration will examine the UK music industry's COVID recovery and the sector's individual components to establish its significance to the UK economy, and its potential as a driver of growth. This is particularly important as the government looks to reform education; highlighting the economic importance of the music industry has the prospect of shifting the narrative away from arts funding as charity, towards it as a avenue for economic growth. 
+            <br>  
+                Data sources: Economic data on the music industry is relatively scarce, with most APIs in this field focused on music metadata or behind a large paywall. Thus, while an OECD API has been used, much of the data has been downloaded or scraped from reputable organisations in the UK music industry, government data, or international organisations. 
+                </p>
             <br>
 
              <!-- Music Performance Over COVID-19 -->
@@ -62,13 +66,12 @@
              <div class="title">
 
                 <h3>COVID Recovery</h3>
-                <p>This graphs shows the ordered market value of the squads of Premier League clubs, as both a percentage of the total squad values of PL clubs, and in pounds (using a tooltip). The data was scraped from the website <a href="https://www.transfermarkt.co.uk/premier-league/marktwerteverein/wettbewerb/GB1/plus/?stichtag=2022-08-15" rel="nofollow">TransferMarkt</a>.</p>
-                <p> <a href="https://colab.research.google.com/drive/1SJ5jFVvncLufgAfDXu9KmQBjYK4AB87d?usp=sharing" rel="nofollow">The link to the Google Colab containing the data scraping and cleaning can be found here.</a></p>
+                <p>Figure 1 shows the Gross Value Added (GVA) of various arts sectors to the UK economy and for all UK sectors (green) between 2019 and June 2022, encompassing the COVID-19 period. Despite dropping the lowest of all arts sectors-37%- compared to its 2019 index value, the music sector has seen the strongest recovery, comparatively producing at well above the UK overall.</p>
                 <div class="chart3" id="Chart6"></div> 
                 <p>
-                    I chose this site as I have tried to get data from it previously; scraping and converting the data into TIDY form made this a lot easier
-                </p>
-            
+                    Data: Taken from the DCMS's Experimental Official Statistics, using an index for each sector around 2019, and converted to TIDY format. It is not included in the ONS API so could not be automated.                 </p>
+                <p><span class="emphasized">Sources: <a href="https://www.gov.uk/government/statistics/dcms-sectors-economic-estimates-monthly-gva-to-june-2022#:~:text=Headline%20findings&text=GVA%20of%20reported%20DCMS%20Sectors,significantly%20affected%20by%20the%20pandemic" target="_blank" rel="noreferrer">GVA Data</a>.
+
                 <br>
 
                 <!-- Global Market/Exports -->
@@ -76,67 +79,58 @@
     
         <div class="title">
 
-            <h3>Global Music Market and UK Exports</h3>
-            <p>This graphs shows the ordered market value of the squads of Premier League clubs, as both a percentage of the total squad values of PL clubs, and in pounds (using a tooltip). The data was scraped from the website <a href="https://www.transfermarkt.co.uk/premier-league/marktwerteverein/wettbewerb/GB1/plus/?stichtag=2022-08-15" rel="nofollow">TransferMarkt</a>.</p>
-            <p> <a href="https://colab.research.google.com/drive/1SJ5jFVvncLufgAfDXu9KmQBjYK4AB87d?usp=sharing" rel="nofollow">The link to the Google Colab containing the data scraping and cleaning can be found here.</a></p>
+            <h3>Global Comparison</h3>
+            <p>Figure 2 shows the UK as having the 4th largest music industry globally, while Figure 3 exhibits the 10 countries that generate the most revenue for the UK through its music industry. These put into context the sheer size of the UK music industry by comparing to much larger countries in terms of GDP and population, while also quantifying its contribution to the balance of payments, reaching almost £500 million. Figure 3 clearly highlights this as a growing exporter industry, with positive annual percentage growth in most key markets, including 61% in China.</p>
             <div class="twocolumn">
             <div class="chart3" id="Chart4"></div> 
             <div class="chart3" id="Chart2"></div></div>
 
             <p>
-                I chose this site as I have tried to get data from it previously; scraping and converting the data into TIDY form made this a lot easier
-            </p>
-        
+                Data: Data for these graphs was scraped from the BPI and Wikipedia using different methods in <a href="https://colab.research.google.com/drive/1jpUhmmTW_0r1cF3fxmv1VuRdAGe-xKdp?usp=sharing" target="_blank" rel="noreferrer">Google Colab</a>). This includes data cleaning to put both datasets into VEGA readable formats and calculating country markets as a percentage of the global market.</p>
+            <p><span class="emphasized">Sources: <a href="https://www.bpi.co.uk/news-analysis/british-music-exports-leap-137-to-new-high-as-a-record-number-of-uk-artists-each-hit-100-million-global-streams-in-2021/" target="_blank" rel="noreferrer">BPI Export Data</a>, <a href="https://en.wikipedia.org/wiki/List_of_largest_recorded_music_markets" target="_blank" rel="noreferrer">Wikipedia Global Data</a></span></p>
+
             <br>
 
-                <!-- Area revenue -->
+                <!-- UK Revenue Stream -->
 
     
         <div class="title">
 
-            <h3>Revenue Area Chart</h3>
-            <p>This graphs shows the ordered market value of the squads of Premier League clubs, as both a percentage of the total squad values of PL clubs, and in pounds (using a tooltip). The data was scraped from the website <a href="https://www.transfermarkt.co.uk/premier-league/marktwerteverein/wettbewerb/GB1/plus/?stichtag=2022-08-15" rel="nofollow">TransferMarkt</a>.</p>
-            <p> <a href="https://colab.research.google.com/drive/1SJ5jFVvncLufgAfDXu9KmQBjYK4AB87d?usp=sharing" rel="nofollow">The link to the Google Colab containing the data scraping and cleaning can be found here.</a></p>
+            <h3>UK Market Revenue Breakdown</h3>
+            <p>Figure 4 shows a breakdown of the overall UK music industry, currently valued at over £1.2 billion. Here we can see the large rise streaming revenues, but also the continued importance of physical performances.</p>
             <div class="chart3" id="Chart5"></div> 
             <p>
-                I chose this site as I have tried to get data from it previously; scraping and converting the data into TIDY form made this a lot easier
-            </p>
-        
+                Data: Taken from a BPI report, converted to TIDY form in <a href="https://colab.research.google.com/drive/1jpUhmmTW_0r1cF3fxmv1VuRdAGe-xKdp#scrollTo=jeCSQD__E55_" target="_blank" rel="noreferrer">Google Colab</a>.</p>
+            <p><span class="emphasized">Sources: <a href="https://www.bpi.co.uk/news-analysis/uk-recorded-music-revenues-continue-recovery-in-2021/" target="_blank" rel="noreferrer">BPI Revenue Data</a>.
+
             <br>
 
                 <!-- Bubble/Heat Map-->
 
-        <h3>Heat Map</h3>
-        <p>This graphs shows the ordered market value of the squads of Premier League clubs, as both a percentage of the total squad values of PL clubs, and in pounds (using a tooltip). The data was scraped from the website <a href="https://www.transfermarkt.co.uk/premier-league/marktwerteverein/wettbewerb/GB1/plus/?stichtag=2022-08-15" rel="nofollow">TransferMarkt</a>.</p>
-        <p> <a href="https://colab.research.google.com/drive/1SJ5jFVvncLufgAfDXu9KmQBjYK4AB87d?usp=sharing" rel="nofollow">The link to the Google Colab containing the data scraping and cleaning can be found here.</a></p>
+        <h3>Music Streaming</h3>
+        <p>With streaming now the dominant aspect of the UK music industry, Figure 5 is a bubble chart plotting a country's GDP per capita against its music streaming penetration rate- the percentage of a population that have a streaming account. There appears to be a somewhat strong positive correlation between the two variables;  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtBmx5CBbUgDu1OoyYMIcbVDmY4szJUcICsJLOWYAnP5eMD5+gZb0zKwcyDSyBACyAMoACgBKAKQATAAMAOIAIikpAMIAjO4QxCAAvkqCSACe9mgA2qDI2gDWaKCYjThw+jhscZiKIABmNIKCcMpomNoMcHUgLo7KcWS9IAAeu9NwggvoyekABAAUGQCUE-2D+gCODD6YdGo0pLVKjYc0Y6nECFYolB4DIboV7vT4fH41REKDpIbq7R5QkDCWRDJSOQRsbT6abaOBMbQ0KA9NZLHwQSaEhBtUCksikiAQdjydCg0oTOT6c5pa53WoAXSUGzYW1kO00+wBQMFqWFN3uSgxLzerjh3yGa3+8qOJ30vPBGshWth6nh+qRfVMsnpjOZIFZ7M5Ap5RT5Si9ICFIvVIBwqKQCAgi2Wq2RICgSEEUAYDWc+gA5GkAE2oC5pgDUDO0yEwV1UmAYCEo2iSMNJygUucoWUmaeDSEj6DSWXFSk6PXlmvQzj24zxbAJRPQJLJFKpEwO6DMND8MAmCZoZG5bo3WAmhv4YjWUplcr6cBH6Mt6FkbAQcQTE2NwK7tURYpqQA" target="_blank" rel="noreferrer">regressing these produces an R statistic of 0.6</a>. The UK is in the upper-left area of this quadrant, suggesting it has a higher penetration rate that its GDP per capita would suggest. Figure 6 is a heat map showing the projected change in the penetration rate over time, with the UK's progression plotted. While streaming penetration rates will continue to rise globally, the UK will maintain its elevated position.</p>
         <div class="chart3" id="Chart1"></div> 
-
-        <br><p><span class="emphasized">Sources: <a href="https://www.statista.com/outlook/dmo/digital-media/digital-music/music-streaming/worldwide#revenue" target="_blank" rel="noreferrer">Music Streaming Penetration Data</a>,<a href="https://worldpopulationreview.com/countries" target="_blank" rel="noreferrer">Population Data</a>, <a href="https://worldpopulationreview.com/country-rankings/gdp-per-capita-by-country" target="_blank" rel="noreferrer">GDP per Capita Data</a>.</span></p>
-        <br><p> <a href="https://colab.research.google.com/drive/1SJ5jFVvncLufgAfDXu9KmQBjYK4AB87d?usp=sharing" rel="nofollow">Google Colab</a></p>
-
         <p>
-            I chose this site as I have tried to get data from it previously; scraping and converting the data into TIDY form made this a lot easier
-        </p>
+            Data: The penetration data could not be downloaded as it was behind a paywall, so I scraped it in from the webpage and converted it to TIDY format in <a href="https://colab.research.google.com/drive/1SJ5jFVvncLufgAfDXu9KmQBjYK4AB87d?usp=sharing" target="_blank" rel="noreferrer">Google Colab</a>. I wanted to sort the countries into continents; to achieve this I experimented with the <a href="https://chat.openai.com/chat/2e021fd8-8580-4042-8b84-b52fb097e0d4\" target="_blank" rel="noreferrer">ChatGPT AI bot</a> and asked it to produce a unique dataset of continents for this specific list of countries and exported it as a csv, before matching and merging it with the penetration data. This ensured I didn’t have to worry about mismatched country names through an external continent list.        </p>
+        <p><span class="emphasized">Sources: <a href="https://www.statista.com/outlook/dmo/digital-media/digital-music/music-streaming/worldwide#revenue" target="_blank" rel="noreferrer">Music Streaming Penetration Data</a>, <a href="https://worldpopulationreview.com/countries" target="_blank" rel="noreferrer">Population Data</a>, <a href="https://worldpopulationreview.com/country-rankings/gdp-per-capita-by-country" target="_blank" rel="noreferrer">GDP per Capita Data</a>.</span></p>
 
         <br>
 
-         
 
                 <!-- Wembley 30th -->
 
     
         <div class="title">
 
-            <h3>COVID Wembley</h3>
-            <p>This graphs shows the ordered market value of the squads of Premier League clubs, as both a percentage of the total squad values of PL clubs, and in pounds (using a tooltip). The data was scraped from the website <a href="https://www.transfermarkt.co.uk/premier-league/marktwerteverein/wettbewerb/GB1/plus/?stichtag=2022-08-15" rel="nofollow">TransferMarkt</a>.</p>
-            <p> <a href="https://colab.research.google.com/drive/1SJ5jFVvncLufgAfDXu9KmQBjYK4AB87d?usp=sharing" rel="nofollow">The link to the Google Colab containing the data scraping and cleaning can be found here.</a></p>
+            <h3>Microeconmic Impact: Live Performances</h3>
+            <p>As well as largescale macroeconomic effects, the music industry has been pivotal in assisting local communities out of the difficulties of the pandemic. Using Google mobility data, Figure 7 shows a choropleth map of London, detailing changes in retail activity from a pre-pandemic baseline on dates where live music was being played at Wembley Stadium. Here, we can see values well above the Brent baseline, and compared to other London Boroughs, showing economic activity at a local level as a result of live music events. To put this in perspective, the heat map below shows every data point in the Google mobility dataset, with these Wembley dates producing some of the highest scores seen across the whole of the pandemic.</p>
             <div class="chart3" id="Chart7"></div> <br>
             <div class="chart5" id="Chart8"></div> 
 
             <p>
-                I chose this site as I have tried to get data from it previously; scraping and converting the data into TIDY form made this a lot easier
-            </p>
-        
+                Data: I processed and cleaned the full Google Mobility dataset, comprising of over 30,000 entries, in<a href="https://colab.research.google.com/drive/1aVBLv6ncaE_56paXexexkxh8_HOKot3G?usp=sharing" target="_blank" rel="noreferrer"> Google Colab</a> , before matching it with a map of London. The <a href="https://github.com/chandt99/chandt99.github.io/blob/main/LGM.csv" target="_blank" rel="noreferrer">full dataset</a> can access retail, transport, and other data for any day in London over the pandemic. As the full data would not work with the Vegalite selector, I had to narrow down the dataset.</p>             
+                <p><span class="emphasized">Sources: <a href="https://www.google.com/covid19/mobility/" target="_blank" rel="noreferrer">Google Mobility Data</a>, <a href="http://skgrange.github.io/data.html" target="_blank" rel="noreferrer">London Map</a>.
+
             <br>
 
 
@@ -147,42 +141,36 @@
         <div class="title">
 
             <h3>Non-Economic Measures: Life Satisfaction</h3>
-            <p>This graphs shows the ordered market value of the squads of Premier League clubs, as both a percentage of the total squad values of PL clubs, and in pounds (using a tooltip). The data was scraped from the website <a href="https://www.transfermarkt.co.uk/premier-league/marktwerteverein/wettbewerb/GB1/plus/?stichtag=2022-08-15" rel="nofollow">TransferMarkt</a>.</p>
-            <p> <a href="https://colab.research.google.com/drive/1SJ5jFVvncLufgAfDXu9KmQBjYK4AB87d?usp=sharing" rel="nofollow">The link to the Google Colab containing the data scraping and cleaning can be found here.</a></p>
+            <p>To see if music provides economic value in the form of improving life satisfaction, Figure 8 shows life satisfaction data regressed against the music streaming penetration data, taken as a proxy for the amount of music a country listens to. The graph shows little correlation.</p>
             <div class="chart3" id="Chart9"></div> <br>
-
             <p>
-                I chose this site as I have tried to get data from it previously; scraping and converting the data into TIDY form made this a lot easier
-            </p>
-        
+                Data: The life satisfaction data was taken from the OECD API allowing automation, with the data cleaned in <a href="https://colab.research.google.com/drive/1vQY6WHvfRbQoGLx4NkIu3wXGBBpbq7DX?usp=sharing" target="_blank" rel="noreferrer">Google Colab</a> and exported to a csv to merge with the penetration data. The OECD API was used as it includes high-income countries with relatively high penetration rates. 
+                        </p>
+            <p><span class="emphasized">Sources: <a href="https://stats.oecd.org/SDMX-JSON/data/BLI/AUS+AUT+BEL+CAN+CHL+COL+CRI+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LVA+LTU+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+OECD+NMEC+BRA+RUS+ZAF.HS_SFRH+SW_LIFS.L.TOT+MN+WMN+HGH+LW/all?&dimensionAtObservation=allDimensions&pid=d1d1e9ed-38a4-4720-b93e-b9b3ece5a742" target="_blank" rel="noreferrer">OECD API</a>.
+
             <br>
+
+            <div class="title">
+            <h2>Conclusion</h2>
+        </div>
+        <p>
+            The UK music industry has been shown to have positive macro and micro effects on the UK economy. While performing well above the UK average in COVID recovery, it is continuing its strong position on the global stage by expanding into emerging markets like China. This has been driven by continuing growth in music streaming, with UK labels again leading in generating revenue from this. Finally, there is some evidence of the importance of live music to local economies. I believe this is where further research could be developed, particularly with the scope and flexibility of the Google Mobility data set. With greater resources, a more complete study could be developed to catalogue the effect of local live music throughout London, conducting a diff-in-diff experiment comparing retail activity on days of live music to normal days. 
+            </p>
+        <br>
+        <hr color=#32251B width="75%" size="8" align="center" opacity="0.5">
+
     </div>
 </div>
     </body>
 
 
 
-                                       <!--  Music Revenue -->
-                            
-                                       <div class="title">
-                                        <h2>Music revenue</h2>
+                                
                         
                                 
                         
                         
-<!-- 
 
-    Brief:
-    800 words
-    Cover sheet
-    Aims, Data access/automation/replication, challenges in data cleaning/analysis and how overcome, conclusion
-    Clarity of Q, use of APIs, key takeaways, logicla conclusion, stimulate further work 
-    Second London map?
-
-To Do:
-Sort colours
-
- -->
 
  <script>
     //Define charts:

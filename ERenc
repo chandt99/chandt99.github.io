@@ -1,7 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-
+  "title": {
+    "text": "Exchange Rates- different encoding",
+    "anchor": "start",
+    "color": "black",
+    "subtitleColor":"black"},
+  "height": 500,
+  "width": 500,
 
   "data":{
     "values":[
@@ -24,7 +30,7 @@
 
   "encoding":{
     "x":{"field":"Time","type":"temporal", "timeUnit":"monthdate", "title":"Time"},
-    "y":{"field":"Value", "type":"quantitative"},
+    "y":{"field":"Value", "type":"quantitative", "title":"Exchange Rate"},
     "color":{"field":"Exchange Rate"},
     "tooltip":[{"field":"Exchange Rate"},
     {"field":"Pound-Euro ER"},

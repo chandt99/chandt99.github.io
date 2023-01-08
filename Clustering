@@ -4,6 +4,14 @@
   "width":300,
   "height":300,
 
+  "title": {
+    "text": "English Football Clustering",
+    "anchor": "start",
+    "color": "black",
+    "subtitleColor":"black"},
+  "height": 300,
+  "width": 300,
+
   "data": {"url": "https://raw.githubusercontent.com/chandt99/chandt99.github.io/main/ClubClustering.csv"},
   "mark": "point",
   "encoding": {
